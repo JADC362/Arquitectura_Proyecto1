@@ -37,8 +37,7 @@ output		[2:0]	SC_MIR_Cond_OutBUS;
 output		[10:0]	SC_MIR_JumpAddr_OutBUS;
 input		SC_MIR_CLOCK_50;
 input		SC_MIR_RESET_InHigh;
-input		SC_MIR_clear_InLow;
-input		SC_MIR_data_InBUS;	
+input		SC_MIR_clear_InLow;	
 input		[MIR_DATAWIDTH-1:0]	SC_MIR_data_InBUS;
 
 //=======================================================
@@ -52,7 +51,7 @@ reg [MIR_DATAWIDTH-1:0] MIR_Signal;
 //INPUT LOGIC: COMBINATIONAL
 always @(*)
 begin
-	if (SC_RegGENERAL_clear_InLow == 1'b0)
+	if (SC_MIR_clear_InLow == 1'b0)
 		MIR_Signal = 0;
 	else
 		MIR_Signal = SC_MIR_data_InBUS;
