@@ -1,16 +1,8 @@
-module CC_MIM_ControlStore #(parameter DATAWIDTH_MUX_SELECTION=3, parameter DATAWIDTH_BUS=8)(
+module CC_MIM_ControlStore #(parameter DATAWIDTH_OUTPUT_BUS=41, parameter DATAWIDTH_INPUT_BUS=11)(
 	//////////// OUTPUTS //////////
-	CC_MUX_data_OutBUS,
+	CC_MIM_ControlStore_data_OutBUS,
 	//////////// INPUTS //////////
-	CC_MUX_data0_InBUS,
-	CC_MUX_data1_InBUS,
-	CC_MUX_data2_InBUS,	
-	CC_MUX_data3_InBUS,	
-	CC_MUX_data4_InBUS,	
-	CC_MUX_data5_InBUS,	
-	CC_MUX_data6_InBUS,	
-	CC_MUX_data7_InBUS,	
-	CC_MUX_selection_InBUS
+	CC_MIM_ControlStore_data_InBUS
 );
 //=======================================================
 //  PARAMETER declarations
@@ -19,16 +11,8 @@ module CC_MIM_ControlStore #(parameter DATAWIDTH_MUX_SELECTION=3, parameter DATA
 //=======================================================
 //  PORT declarations
 //=======================================================
-output reg	[DATAWIDTH_BUS-1:0] CC_MUX_data_OutBUS;
-input			[DATAWIDTH_BUS-1:0] CC_MUX_data0_InBUS;
-input			[DATAWIDTH_BUS-1:0] CC_MUX_data1_InBUS;
-input			[DATAWIDTH_BUS-1:0] CC_MUX_data2_InBUS;
-input			[DATAWIDTH_BUS-1:0] CC_MUX_data3_InBUS;	
-input			[DATAWIDTH_BUS-1:0] CC_MUX_data4_InBUS;
-input			[DATAWIDTH_BUS-1:0] CC_MUX_data5_InBUS;
-input			[DATAWIDTH_BUS-1:0] CC_MUX_data6_InBUS;
-input			[DATAWIDTH_BUS-1:0] CC_MUX_data7_InBUS;
-input			[DATAWIDTH_MUX_SELECTION-1:0] CC_MUX_selection_InBUS;
+output reg	[DATAWIDTH_OUTPUT_BUS-1:0] CC_MIM_ControlStore_data_OutBUS;
+input			[DATAWIDTH_INPUT_BUS-1:0] CC_MIM_ControlStore_data_InBUS;
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
@@ -39,17 +23,27 @@ input			[DATAWIDTH_MUX_SELECTION-1:0] CC_MUX_selection_InBUS;
 //INPUT LOGIC: COMBINATIONAL
 always@(*)
 begin
-	case (CC_MUX_selection_InBUS)	
-	// Example to more outputs: WaitStart: begin sResetCounter = 0; sCuenteUP = 0; end
-		3'b000: CC_MUX_data_OutBUS = CC_MUX_data0_InBUS;
-		3'b001: CC_MUX_data_OutBUS = CC_MUX_data1_InBUS;
-		3'b010: CC_MUX_data_OutBUS = CC_MUX_data2_InBUS;
-		3'b011: CC_MUX_data_OutBUS = CC_MUX_data3_InBUS;
-		3'b100: CC_MUX_data_OutBUS = CC_MUX_data4_InBUS;
-		3'b101: CC_MUX_data_OutBUS = CC_MUX_data5_InBUS;
-		3'b110: CC_MUX_data_OutBUS = CC_MUX_data6_InBUS;
-		3'b111: CC_MUX_data_OutBUS = CC_MUX_data7_InBUS;
-		default :   CC_MUX_data_OutBUS = CC_MUX_data0_InBUS; // channel 0 is selected 
+	case (CC_MIM_ControlStore_data_InBUS)	
+		11'b00000000000: CC_MIM_ControlStore_data_InBUS = 41'b10000001000000100101010010100000000000000; //0
+		11'b00000000001: CC_MIM_ControlStore_data_InBUS = 41'b00000000000000000000000010111100000000000; //1
+		11'b11001000000: CC_MIM_ControlStore_data_InBUS = 41'b00000000000000000000000010110111001000010; //1600
+		11'b11001000001: CC_MIM_ControlStore_data_InBUS = 41'b00000010000001000000100001111011111111111; //1601
+		11'b11001000010: CC_MIM_ControlStore_data_InBUS = 41'b10010100000000100001000110000000000000000; //1602
+		11'b11001000011: CC_MIM_ControlStore_data_InBUS = 41'b00000011000010000000100001111011111111111; //1603
+		11'b10001000000: CC_MIM_ControlStore_data_InBUS = 41'b00000000000000000000000010111000000000010; //1088
+		11'b00000000010: CC_MIM_ControlStore_data_InBUS = 41'b10010100000000100001000101000000000000000; //2
+		11'b00000000011: CC_MIM_ControlStore_data_InBUS = 41'b10000100000000100001000111100000000000000; //3
+		11'b00000000100: CC_MIM_ControlStore_data_InBUS = 41'b10000100000000100001000111100000000000000; //4
+		11'b00000000101: CC_MIM_ControlStore_data_InBUS = 41'b10010100000000100101000111100000000000000; //5
+		11'b00000000110: CC_MIM_ControlStore_data_InBUS = 41'b10010100000000100101000111100000000000000; //6
+		11'b00000000111: CC_MIM_ControlStore_data_InBUS = 41'b10010100000000100101000111100000000000000; //7
+		11'b00000001000: CC_MIM_ControlStore_data_InBUS = 41'b10010101001000100101000100010100000001100; //8
+		11'b00000001001: CC_MIM_ControlStore_data_InBUS = 41'b10010101001000100101000100010100000001101; //9
+		11'b00000001010: CC_MIM_ControlStore_data_InBUS = 41'b10010101001000100101000100001000000001100; //10
+		11'b00000001011: CC_MIM_ControlStore_data_InBUS = 41'b00000000000000000000000010111011111111111; //11
+		11'b00000001100: CC_MIM_ControlStore_data_InBUS = 41'b10000001000010100000000100011000000000000; //12
+		11'b11111111111: CC_MIM_ControlStore_data_InBUS = 41'b10000000000000100000000111011000000000000; //2047
+		default :   CC_MUX_data_OutBUS = 41'b00000000000000000000000000000000000000000;
 	endcase
 end
 //=======================================================
