@@ -18,14 +18,13 @@
 //=======================================================
 //  MODULE Definition
 //=======================================================
-module SC_RegGENERAL #(parameter RegGENERAL_DATAWIDTH=8)(
+module SC_RegGENERAL #(parameter DATAWIDTH_BUS=32)(
 	//////////// OUTPUTS //////////
 	SC_RegGENERAL_data_OutBUS,
 	//////////// INPUTS //////////
 	SC_RegGENERAL_CLOCK_50,
 	SC_RegGENERAL_RESET_InHigh,
-	SC_RegGENERAL_clear_InLow, 
-	SC_RegGENERAL_load_InLow, 
+	SC_RegGENERAL_Write_InLow, 
 	SC_RegGENERAL_data_InBUS
 );
 //=======================================================
@@ -35,31 +34,29 @@ module SC_RegGENERAL #(parameter RegGENERAL_DATAWIDTH=8)(
 //=======================================================
 //  PORT declarations
 //=======================================================
-output		[RegGENERAL_DATAWIDTH-1:0]	SC_RegGENERAL_data_OutBUS;
+output		[DATAWIDTH_BUS-1:0]	SC_RegGENERAL_data_OutBUS;
 input		SC_RegGENERAL_CLOCK_50;
 input		SC_RegGENERAL_RESET_InHigh;
-input		SC_RegGENERAL_clear_InLow;
-input		SC_RegGENERAL_load_InLow;	
-input		[RegGENERAL_DATAWIDTH-1:0]	SC_RegGENERAL_data_InBUS;
+input		SC_RegGENERAL_Write_InLow;	
+input		[DATAWIDTH_BUS-1:0]	SC_RegGENERAL_data_InBUS;
 
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
-reg [RegGENERAL_DATAWIDTH-1:0] RegGENERAL_Register;
-reg [RegGENERAL_DATAWIDTH-1:0] RegGENERAL_Signal;
+reg [DATAWIDTH_BUS-1:0] RegGENERAL_Register;
+reg [DATAWIDTH_BUS-1:0] RegGENERAL_Signal;
 //=======================================================
 //  Structural coding
 //=======================================================
 //INPUT LOGIC: COMBINATIONAL
-always @(*)
+always @ (*)
 begin
-	if (SC_RegGENERAL_clear_InLow == 1'b0)
-		RegGENERAL_Signal = 0;
-	else if (SC_RegGENERAL_load_InLow == 1'b0)
-		RegGENERAL_Signal = SC_RegGENERAL_data_InBUS;
-	else
+	if (SC_RegGENERAL_Write_InLow == 1'b0)	
+		RegGENERAL_Signal = SC_RegGENERAL_DataBUS_In;
+	else 	
 		RegGENERAL_Signal = RegGENERAL_Register;
-	end	
+end
+
 //STATE REGISTER: SEQUENTIAL
 always @(posedge SC_RegGENERAL_CLOCK_50, posedge SC_RegGENERAL_RESET_InHigh)
 begin
