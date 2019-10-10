@@ -6,7 +6,7 @@
 module proyecto1v1(
 
 //////////// INPUTS //////////
-	BB_SYSTEM_CLOCK_50,
+	BB_SYSTEM_CLOCK_50
 	
 );
 //=======================================================
@@ -15,26 +15,16 @@ module proyecto1v1(
 
 	
 	parameter DATAWIDTH_BUS = 32;
-// DECODER CONTROL:  TO GENERATE WRITE SIGNAL TO GENERAL_REGISTERS TO WRITE DATA FROM DATA_BUS_C. ¡ONE BY ONE, NOT AT SAME TIME!
 	parameter DATAWIDTH_DECODER_SELECTION = 3;
-// ALU CONTROL
 	parameter DATAWIDTH_ALU_SELECTION = 4;
-// FIXED_REGISTERS INIT
-	parameter DATA_REGFIXED_INIT_0 = 8'b00001001;
-	parameter DATA_REGFIXED_INIT_1 = 8'b00001111;
-// DECODER CONTROL:  TO GENERATE WRITE SIGNAL TO GENERAL_REGISTERS TO WRITE DATA FROM DATA_BUS_C. ¡ONE BY ONE, NOT AT SAME TIME!
 	parameter DATAWIDTH_DECODER_OUT = 4;
-// MUX CONTROL: TO SELECT OUTPUT REGISTER TO BUS_A, BUS_B OR BOTH OF THEM
 	parameter DATAWIDTH_MUX_SELECTION = 3;
 
 //=======================================================
 //  PORT declarations
 //=======================================================
+
 	input 	BB_SYSTEM_CLOCK_50;
-	
-//=======================================================
-//  REG/WIRE declarations
-//=======================================================
 
 //=======================================================
 //  Structural coding
@@ -43,13 +33,11 @@ WB_uProcesador #(.DATAWIDTH_BUS(DATAWIDTH_BUS),
 
  .DATAWIDTH_DECODER_SELECTION(DATAWIDTH_DECODER_SELECTION), 
  .DATAWIDTH_ALU_SELECTION(DATAWIDTH_ALU_SELECTION), 
- .DATA_REGFIXED_INIT_0(DATA_REGFIXED_INIT_0),
- .DATA_REGFIXED_INIT_1(DATA_REGFIXED_INIT_1),
  .DATAWIDTH_DECODER_OUT(DATAWIDTH_DECODER_OUT), 
  .DATAWIDTH_MUX_SELECTION(DATAWIDTH_MUX_SELECTION)) 
  
  WB_uProcesador_u0 (
-// port map - connection between master ports and signals/registers   
+  
 	.WB_uProcesador_CLOCK_50(BB_SYSTEM_CLOCK_50)	
 );
 endmodule
