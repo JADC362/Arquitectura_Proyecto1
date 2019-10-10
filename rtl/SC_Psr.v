@@ -10,7 +10,7 @@ module SC_Psr (
 	SC_Psr_negativo,
 	SC_Psr_cero,
 	SC_Psr_overflow,
-	SC_Psr_carry
+	SC_Psr_carry,
 	//set condition codes
 	SC_Psr_Write_InLow,
 	
