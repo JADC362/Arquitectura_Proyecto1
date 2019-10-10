@@ -20,12 +20,12 @@
 //=======================================================
 module SC_RegGENERAL #(parameter DATAWIDTH_BUS=32)(
 	//////////// OUTPUTS //////////
-	SC_RegGENERAL_data_OutBUS,
+	SC_RegGENERAL_DataBUS_Out,
 	//////////// INPUTS //////////
 	SC_RegGENERAL_CLOCK_50,
 	SC_RegGENERAL_RESET_InHigh,
 	SC_RegGENERAL_Write_InLow, 
-	SC_RegGENERAL_data_InBUS
+	SC_RegGENERAL_DataBUS_In
 );
 //=======================================================
 //  PARAMETER declarations
@@ -34,11 +34,11 @@ module SC_RegGENERAL #(parameter DATAWIDTH_BUS=32)(
 //=======================================================
 //  PORT declarations
 //=======================================================
-output		[DATAWIDTH_BUS-1:0]	SC_RegGENERAL_data_OutBUS;
+output		[DATAWIDTH_BUS-1:0]	SC_RegGENERAL_DataBUS_Out;
 input		SC_RegGENERAL_CLOCK_50;
 input		SC_RegGENERAL_RESET_InHigh;
 input		SC_RegGENERAL_Write_InLow;	
-input		[DATAWIDTH_BUS-1:0]	SC_RegGENERAL_data_InBUS;
+input		[DATAWIDTH_BUS-1:0]	SC_RegGENERAL_DataBUS_In;
 
 //=======================================================
 //  REG/WIRE declarations
@@ -69,6 +69,6 @@ end
 //  Outputs
 //=======================================================
 //OUTPUT LOGIC: COMBINATIONAL
-assign SC_RegGENERAL_data_OutBUS = RegGENERAL_Register;
+assign SC_RegGENERAL_DataBUS_Out = RegGENERAL_Register;
 
 endmodule

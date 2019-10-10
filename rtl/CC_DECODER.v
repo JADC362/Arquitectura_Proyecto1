@@ -46,24 +46,24 @@ begin
 	case (CC_DECODER_Selection_InBUS)	
 	
 		//General registers
-		4'b0000: CC_DECODER_DataDecoder_Out = 16'b1111111111111110;//g0
-		4'b0001: CC_DECODER_DataDecoder_Out = 16'b1111111111111101;//g1
-		4'b0010: CC_DECODER_DataDecoder_Out = 16'b1111111111111011;//g2
-		4'b0011: CC_DECODER_DataDecoder_Out = 16'b1111111111110111;//g3
-		4'b0100: CC_DECODER_DataDecoder_Out = 16'b1111111111101111;//g4
-		4'b0101: CC_DECODER_DataDecoder_Out = 16'b1111111111011111;//g5
-		4'b0110: CC_DECODER_DataDecoder_Out = 16'b1111111110111111;//g6
-		4'b0111: CC_DECODER_DataDecoder_Out = 16'b1111111101111111;//g7
+		4'b0000: CC_DECODER_Selection_OutBUS = 16'b1111111111111110;//g0
+		4'b0001: CC_DECODER_Selection_OutBUS = 16'b1111111111111101;//g1
+		4'b0010: CC_DECODER_Selection_OutBUS = 16'b1111111111111011;//g2
+		4'b0011: CC_DECODER_Selection_OutBUS = 16'b1111111111110111;//g3
+		4'b0100: CC_DECODER_Selection_OutBUS = 16'b1111111111101111;//g4
+		4'b0101: CC_DECODER_Selection_OutBUS = 16'b1111111111011111;//g5
+		4'b0110: CC_DECODER_Selection_OutBUS = 16'b1111111110111111;//g6
+		4'b0111: CC_DECODER_Selection_OutBUS = 16'b1111111101111111;//g7
 				
 		//Specifig registers
 				
-		4'b1000: CC_DECODER_DataDecoder_Out = 16'b1111111011111111;//PC (8)
-		4'b1001: CC_DECODER_DataDecoder_Out = 16'b1111110111111111;//Temp0 (9)
-		4'b1010: CC_DECODER_DataDecoder_Out = 16'b1111101111111111;//Temp1 (10)
-		4'b1011: CC_DECODER_DataDecoder_Out = 16'b1111011111111111;//Temp2 (11)
-		4'b1100: CC_DECODER_DataDecoder_Out = 16'b1110111111111111;//Temp3 (12)
-		4'b1101: CC_DECODER_DataDecoder_Out = 16'b1101111111111111;//IR (13)
-		default: CC_DECODER_DataDecoder_Out = 16'b1111111111111111; //Default 
+		4'b1000: CC_DECODER_Selection_OutBUS = 16'b1111111011111111;//PC (8)
+		4'b1001: CC_DECODER_Selection_OutBUS = 16'b1111110111111111;//Temp0 (9)
+		4'b1010: CC_DECODER_Selection_OutBUS = 16'b1111101111111111;//Temp1 (10)
+		4'b1011: CC_DECODER_Selection_OutBUS = 16'b1111011111111111;//Temp2 (11)
+		4'b1100: CC_DECODER_Selection_OutBUS = 16'b1110111111111111;//Temp3 (12)
+		4'b1101: CC_DECODER_Selection_OutBUS = 16'b1101111111111111;//IR (13)
+		default: CC_DECODER_Selection_OutBUS = 16'b1111111111111111; //Default 
 	endcase
 end
 //=======================================================

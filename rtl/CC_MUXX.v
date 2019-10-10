@@ -20,7 +20,7 @@
 //=======================================================
 module CC_MUXX #(parameter DATAWIDTH_MUX_SELECTION=4, parameter DATAWIDTH_BUS=32)(
 	//////////// OUTPUTS //////////
-	CC_MUX_DataBUS_Out,
+	CC_MUX_data_OutBUS,
 	//////////// INPUTS //////////
 	CC_MUX_DataBUS_In_g0,
 	CC_MUX_DataBUS_In_g1,
@@ -45,7 +45,7 @@ module CC_MUXX #(parameter DATAWIDTH_MUX_SELECTION=4, parameter DATAWIDTH_BUS=32
 //=======================================================
 //  PORT declarations
 //=======================================================
-output reg	[DATAWIDTH_BUS-1:0] CC_MUX_DataBUS_Out;
+output reg	[DATAWIDTH_BUS-1:0] CC_MUX_data_OutBUS;
 input			[DATAWIDTH_BUS-1:0] CC_MUX_DataBUS_In_g0;
 input			[DATAWIDTH_BUS-1:0] CC_MUX_DataBUS_In_g1;
 input			[DATAWIDTH_BUS-1:0] CC_MUX_DataBUS_In_g2;
@@ -71,26 +71,26 @@ input			[DATAWIDTH_MUX_SELECTION-1:0] CC_MUX_Selection_In;
 //INPUT LOGIC: COMBINATIONAL
 always@(*)
 begin
-	case (CC_MUX_selection_InBUS)	
+	case (CC_MUX_Selection_In)	
 		
 		//General registers
-		4'b0000: CC_MUX_data_OutBUS = CC_MUX_DataBUS_In_g0
-		4'b0001: CC_MUX_data_OutBUS = CC_MUX_DataBUS_In_g1
-		4'b0010: CC_MUX_data_OutBUS = CC_MUX_DataBUS_In_g2
-		4'b0011: CC_MUX_data_OutBUS = CC_MUX_DataBUS_In_g3
-		4'b0100: CC_MUX_data_OutBUS = CC_MUX_DataBUS_In_g4
-		4'b0101: CC_MUX_data_OutBUS = CC_MUX_DataBUS_In_g5
-		4'b0110: CC_MUX_data_OutBUS = CC_MUX_DataBUS_In_g6
-		4'b0111: CC_MUX_data_OutBUS = CC_MUX_DataBUS_In_g7
+		4'b0000: CC_MUX_data_OutBUS = CC_MUX_DataBUS_In_g0;
+		4'b0001: CC_MUX_data_OutBUS = CC_MUX_DataBUS_In_g1;
+		4'b0010: CC_MUX_data_OutBUS = CC_MUX_DataBUS_In_g2;
+		4'b0011: CC_MUX_data_OutBUS = CC_MUX_DataBUS_In_g3;
+		4'b0100: CC_MUX_data_OutBUS = CC_MUX_DataBUS_In_g4;
+		4'b0101: CC_MUX_data_OutBUS = CC_MUX_DataBUS_In_g5;
+		4'b0110: CC_MUX_data_OutBUS = CC_MUX_DataBUS_In_g6;
+		4'b0111: CC_MUX_data_OutBUS = CC_MUX_DataBUS_In_g7;
 				
 		//Specifig registers
 				
-		4'b1000: CC_MUX_data_OutBUS = CC_MUX_DataBUS_PC,
-		4'b1001: CC_MUX_data_OutBUS = CC_MUX_DataBUS_Temp0,
-		4'b1010: CC_MUX_data_OutBUS = CC_MUX_DataBUS_Temp1,
-		4'b1011: CC_MUX_data_OutBUS = CC_MUX_DataBUS_Temp2,
-		4'b1100: CC_MUX_data_OutBUS = CC_MUX_DataBUS_Temp3,
-		4'b1101: CC_MUX_data_OutBUS = CC_MUX_DataBUS_IR,
+		4'b1000: CC_MUX_data_OutBUS = CC_MUX_DataBUS_PC;
+		4'b1001: CC_MUX_data_OutBUS = CC_MUX_DataBUS_Temp0;
+		4'b1010: CC_MUX_data_OutBUS = CC_MUX_DataBUS_Temp1;
+		4'b1011: CC_MUX_data_OutBUS = CC_MUX_DataBUS_Temp2;
+		4'b1100: CC_MUX_data_OutBUS = CC_MUX_DataBUS_Temp3;
+		4'b1101: CC_MUX_data_OutBUS = CC_MUX_DataBUS_IR;
 
 		default :   CC_MUX_data_OutBUS = CC_MUX_DataBUS_In_g0; // channel 0 is selected 
 		
