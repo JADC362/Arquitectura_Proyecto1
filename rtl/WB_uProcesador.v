@@ -10,4 +10,15 @@ module WB_uProcesador #(parameter DATAWIDTH_BUS=8, parameter DATAWIDTH_REGSHIFTE
 	WB_uProcesador_Reset_InHigh
 );
 
+//=======================================================
+//  PORT declarations
+//=======================================================
+	input 	WB_uProcesador_CLOCK_50;
+	input 	WB_uProcesador_Reset_InHigh;
+	
+SistemaControl control_u0(
+	//////////// CLOCK //////////
+	.CLOCK_50(WB_uProcesador_CLOCK_50),
+	
+);	
 endmodule
