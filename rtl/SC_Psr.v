@@ -2,8 +2,9 @@
 //=======================================================
 //  MODULE Definition
 //=======================================================
-module SC_Psr (
-	
+module SC_Psr #(
+	parameter DATAWIDTH_ALU_SELECTION=4
+)(
 	//////////// INPUTS //////////
 	SC_Psr_CLOCK_50,
 	//banderas
@@ -11,9 +12,7 @@ module SC_Psr (
 	SC_Psr_cero,
 	SC_Psr_overflow,
 	SC_Psr_carry,
-	//set condition codes
 	SC_Psr_Write_InLow,
-	
 	//// OUTPUT ///
 	SC_Psr_Out,
 );
@@ -21,7 +20,7 @@ module SC_Psr (
 //=======================================================
 //  PORT declarations
 //=======================================================
-	output reg	[3:0] SC_Psr_Out;
+	output reg	[DATAWIDTH_ALU_SELECTION-1:0] SC_Psr_Out;
 	input			SC_Psr_CLOCK_50;
 	input			SC_Psr_Write_InLow;
 	input       SC_Psr_negativo;
@@ -32,10 +31,10 @@ module SC_Psr (
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
-	reg [3:0] RegGENERAL_Register;
+	reg [DATAWIDTH_ALU_SELECTION-1:0] RegGENERAL_Register;
 	//inicializacion banderas en 1 
 	initial RegGENERAL_Register = 4'b1111;
-	reg [3:0] RegGENERAL_Signal;
+	reg [DATAWIDTH_ALU_SELECTION-1:0] RegGENERAL_Signal;
 	
 //=======================================================
 //  Structural coding

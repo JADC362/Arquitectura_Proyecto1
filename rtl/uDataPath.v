@@ -36,7 +36,9 @@ module uDATAPATH #(
 	uDataPath_MUX_B_MIR_Selector,
 	uDataPath_MUX_C_MIR_Selector,
 	uDataPath_DataMemory_Data_In,
-	uDataPath_DataMemory_Selector_In
+	uDataPath_DataMemory_Selector_In,
+	Scratchpath_MUX_Out_A_Wire,
+	Scratchpath_MUX_Out_B_Wire
 );
 
 //=======================================================
@@ -72,8 +74,8 @@ module uDATAPATH #(
 //  REG/WIRE declarations
 //=======================================================
 // ARC_REGISTERS OUTPUTS WIRES (registros vitales)
-	wire [DATAWIDTH_BUS-1:0] Scratchpath_MUX_Out_A_Wire;
-	wire [DATAWIDTH_BUS-1:0] Scratchpath_MUX_Out_B_Wire;
+	output [DATAWIDTH_BUS-1:0] Scratchpath_MUX_Out_A_Wire;
+	output [DATAWIDTH_BUS-1:0] Scratchpath_MUX_Out_B_Wire;
 	
 	wire [DATAWIDTH_BUS-1:0] uDataPath_MUXC_Memory_DataBUS_Write;
 	wire [DATAWIDTH_BUS-1:0] uDataPath_ALU_DataBUS_Out_Wire;

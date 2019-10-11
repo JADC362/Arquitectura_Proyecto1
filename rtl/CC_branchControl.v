@@ -4,13 +4,13 @@
 //=======================================================
 //  MODULE Definition
 //=======================================================
-module CC_branchControl #(parameter DATAWIDTH_COND_MIR =3, parameter DATAWIDTH_BANDERAS=4, parameter DATAWIDTH_BUS_OUT=2)(
+module CC_branchControl #(parameter DATAWIDTH_COND_MIR=3, parameter DATAWIDTH_BANDERAS=4, parameter DATAWIDTH_BUS_OUT=2)(
 	//OUTPUTS
 	Brach_output,			//Salida de 2 bits conectada al CS Adress Mux
 	//INPUTS	
 	Branch_Flags,			//Banderas del %psr
 	Branch_Ir13,			//Bit 13 
-	Branch_Condition,		//Condición de la memoria de microinstrucciones
+	Branch_Condition		//Condición de la memoria de microinstrucciones
 	
 );
 
