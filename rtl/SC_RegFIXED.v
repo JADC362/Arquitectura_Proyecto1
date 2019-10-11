@@ -18,12 +18,12 @@
 //=======================================================
 //  MODULE Definition
 //=======================================================
-module SC_RegFIXED #(parameter DATAWIDTH_BUS=8, parameter DATA_REGFIXED_INIT=8'b00000000)(
+module SC_RegFIXED #(parameter DATAWIDTH_BUS=32, parameter DATA_REGFIXED_INIT=32'b00000000000000000000000000000000)(
 	//////////// OUTPUTS //////////
-	SC_RegFIXED_data_OutBUS,
+	SC_RegFIXED_DataBUS_Out,
 	//////////// INPUTS //////////
 	SC_RegFIXED_CLOCK_50,
-	SC_RegFIXED_RESET_InHigh
+	SC_RegGENERAL_RESET_InHigh
 );
 //=======================================================
 //  PARAMETER declarations
@@ -32,9 +32,9 @@ module SC_RegFIXED #(parameter DATAWIDTH_BUS=8, parameter DATA_REGFIXED_INIT=8'b
 //=======================================================
 //  PORT declarations
 //=======================================================
-output reg		[DATAWIDTH_BUS-1:0] SC_RegFIXED_data_OutBUS;
+output reg		[DATAWIDTH_BUS-1:0] SC_RegFIXED_DataBUS_Out;
 input			SC_RegFIXED_CLOCK_50;
-input			SC_RegFIXED_RESET_InHigh;
+input			SC_RegGENERAL_RESET_InHigh;
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
@@ -47,8 +47,8 @@ reg [DATAWIDTH_BUS-1:0] RegFIXED_Signal;
 always @ (*)
 	RegFIXED_Signal = RegFIXED_Register;
 // REGISTER : SEQUENTIAL
-always @ ( posedge SC_RegFIXED_CLOCK_50 , posedge SC_RegFIXED_RESET_InHigh)
-	if (SC_RegFIXED_RESET_InHigh==1)
+always @ ( posedge SC_RegFIXED_CLOCK_50 , posedge SC_RegGENERAL_RESET_InHigh)
+	if (SC_RegGENERAL_RESET_InHigh==1)
 		RegFIXED_Register <= DATA_REGFIXED_INIT;
 	else
 		RegFIXED_Register <= RegFIXED_Signal;
@@ -57,7 +57,7 @@ always @ ( posedge SC_RegFIXED_CLOCK_50 , posedge SC_RegFIXED_RESET_InHigh)
 //=======================================================
 // OUTPUT LOGIC : COMBINATIONAL
 	always @ (*)
-		SC_RegFIXED_data_OutBUS = RegFIXED_Register;  
+		SC_RegFIXED_DataBUS_Out = RegFIXED_Register;  
 
 endmodule
 

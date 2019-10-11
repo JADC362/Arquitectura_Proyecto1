@@ -7,49 +7,49 @@ module proyecto1v1(
 
 //////////// INPUTS //////////
 	BB_SYSTEM_CLOCK_50,
-	
+	BB_SYSTEM_Reset_InHigh	
 );
 //=======================================================
 //  PARAMETER declarations
 //=======================================================
 
-	
-	parameter DATAWIDTH_BUS = 32;
-// DECODER CONTROL:  TO GENERATE WRITE SIGNAL TO GENERAL_REGISTERS TO WRITE DATA FROM DATA_BUS_C. ¡ONE BY ONE, NOT AT SAME TIME!
-	parameter DATAWIDTH_DECODER_SELECTION = 3;
-// ALU CONTROL
-	parameter DATAWIDTH_ALU_SELECTION = 4;
-// FIXED_REGISTERS INIT
-	parameter DATA_REGFIXED_INIT_0 = 8'b00001001;
-	parameter DATA_REGFIXED_INIT_1 = 8'b00001111;
-// DECODER CONTROL:  TO GENERATE WRITE SIGNAL TO GENERAL_REGISTERS TO WRITE DATA FROM DATA_BUS_C. ¡ONE BY ONE, NOT AT SAME TIME!
-	parameter DATAWIDTH_DECODER_OUT = 4;
-// MUX CONTROL: TO SELECT OUTPUT REGISTER TO BUS_A, BUS_B OR BOTH OF THEM
-	parameter DATAWIDTH_MUX_SELECTION = 3;
+	parameter DATAWIDTH_BUS=32;
+	parameter DATA_REGFIXED_INIT_0=32'b00000000000000000000000000000000;
+	parameter DATAWIDTH_BUS_REG_IR=5;
+	parameter DATAWIDTH_BUS_REG_IR_OP=8;
+	parameter DATAWIDTH_DECODER_SELECTION=4;
+	parameter DATAWIDTH_DECODER_OUT=16;
+	parameter DATAWIDTH_MUX_SELECTION=4;
+	parameter DATAWIDTH_ALU_SELECTION=4;
+	parameter DATAWIDTH_BUS_REG_MIR_FIELD=6;
+	parameter DATAWIDTH_BUS_MUX_DATAPATH_OUT=6;
+	parameter DATAWIDTH_COND_MIR =3;
+	parameter DATAWIDTH_BANDERAS=4;
+	parameter DATAWIDTH_BUS_OUT=2;
 
 //=======================================================
 //  PORT declarations
 //=======================================================
+
 	input 	BB_SYSTEM_CLOCK_50;
-	
-//=======================================================
-//  REG/WIRE declarations
-//=======================================================
+	input 	BB_SYSTEM_Reset_InHigh;
 
 //=======================================================
 //  Structural coding
 //=======================================================
-WB_uProcesador #(.DATAWIDTH_BUS(DATAWIDTH_BUS), 
-
- .DATAWIDTH_DECODER_SELECTION(DATAWIDTH_DECODER_SELECTION), 
- .DATAWIDTH_ALU_SELECTION(DATAWIDTH_ALU_SELECTION), 
- .DATA_REGFIXED_INIT_0(DATA_REGFIXED_INIT_0),
- .DATA_REGFIXED_INIT_1(DATA_REGFIXED_INIT_1),
- .DATAWIDTH_DECODER_OUT(DATAWIDTH_DECODER_OUT), 
- .DATAWIDTH_MUX_SELECTION(DATAWIDTH_MUX_SELECTION)) 
- 
- WB_uProcesador_u0 (
-// port map - connection between master ports and signals/registers   
-	.WB_uProcesador_CLOCK_50(BB_SYSTEM_CLOCK_50)	
+WB_uProcesador #(
+	.DATAWIDTH_BUS(DATAWIDTH_BUS), 
+	.DATAWIDTH_DECODER_SELECTION(DATAWIDTH_DECODER_SELECTION), 
+	.DATAWIDTH_ALU_SELECTION(DATAWIDTH_ALU_SELECTION), 
+	.DATAWIDTH_DECODER_OUT(DATAWIDTH_DECODER_OUT), 
+	.DATAWIDTH_MUX_SELECTION(DATAWIDTH_MUX_SELECTION),
+	.DATA_REGFIXED_INIT_0(DATA_REGFIXED_INIT_0),
+	.DATAWIDTH_COND_MIR(DATAWIDTH_COND_MIR),
+	.DATAWIDTH_BANDERAS(DATAWIDTH_BANDERAS),
+	.DATAWIDTH_BUS_OUT(DATAWIDTH_BUS_OUT),
+	.DATAWIDTH_BUS_REG_MIR_FIELD(DATAWIDTH_BUS_REG_MIR_FIELD)
+) WB_uProcesador_u0 (
+	.WB_uProcesador_CLOCK_50(BB_SYSTEM_CLOCK_50),	
+	.WB_uProcesador_Reset_InHigh(BB_SYSTEM_Reset_InHigh)
 );
 endmodule
