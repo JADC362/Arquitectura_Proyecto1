@@ -37,8 +37,8 @@ module uDATAPATH #(
 	uDataPath_MUX_C_MIR_Selector,
 	uDataPath_DataMemory_Data_In,
 	uDataPath_DataMemory_Selector_In,
-	Scratchpath_MUX_Out_A_Wire,
-	Scratchpath_MUX_Out_B_Wire
+	Scratchpath_MUX_Out_A,
+	Scratchpath_MUX_Out_B
 );
 
 //=======================================================
@@ -54,7 +54,8 @@ module uDATAPATH #(
 	output [DATAWIDTH_BUS_REG_IR_OP-1:0] uDataPath_Reg_IR_OP;
 	output uDataPath_Reg_IR_IR13;
 	output uDataPath_ALU_Flags_Write_PCR;
-
+	output [DATAWIDTH_BUS-1:0] Scratchpath_MUX_Out_A;
+	output [DATAWIDTH_BUS-1:0] Scratchpath_MUX_Out_B;
 	
 	//////////// INPUTS //////////
 	
@@ -73,9 +74,6 @@ module uDATAPATH #(
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
-// ARC_REGISTERS OUTPUTS WIRES (registros vitales)
-	output [DATAWIDTH_BUS-1:0] Scratchpath_MUX_Out_A_Wire;
-	output [DATAWIDTH_BUS-1:0] Scratchpath_MUX_Out_B_Wire;
 	
 	wire [DATAWIDTH_BUS-1:0] uDataPath_MUXC_Memory_DataBUS_Write;
 	wire [DATAWIDTH_BUS-1:0] uDataPath_ALU_DataBUS_Out_Wire;
@@ -111,8 +109,8 @@ Scratchpath #(
 	.Scratchpath_Reg_IR_RS2(uDataPath_Reg_IR_RS2_Wire),
 	.Scratchpath_Reg_IR_RD(uDataPath_Reg_IR_RD_Wire),
 	.Scratchpath_Reg_IR_OP(uDataPath_Reg_IR_OP),
-	.Scratchpath_MUX_Out_A(Scratchpath_MUX_Out_A_Wire),
-	.Scratchpath_MUX_Out_B(Scratchpath_MUX_Out_B_Wire),
+	.Scratchpath_MUX_Out_A(Scratchpath_MUX_Out_A),
+	.Scratchpath_MUX_Out_B(Scratchpath_MUX_Out_B),
 	.uDataPath_CLOCK_50(uDataPath_CLOCK_50),
 	.uDATAPATH_RESET_InHigh(uDATAPATH_RESET_InHigh),
 	.MUXC_DataBUS_Write(uDataPath_MUXC_Memory_DataBUS_Write),
@@ -133,8 +131,8 @@ CC_ALU #(.DATAWIDTH_BUS(DATAWIDTH_BUS),.DATAWIDTH_ALU_SELECTION(DATAWIDTH_ALU_SE
 	.CC_ALU_zero_OutLow(uDataPath_Zero_InLow),
 	.CC_ALU_data_OutBUS(uDataPath_ALU_DataBUS_Out_Wire),
 	.CC_ALU_Set_Flags_Out(uDataPath_ALU_Flags_Write_PCR),
-	.CC_ALU_dataA_InBUS(Scratchpath_MUX_Out_A_Wire),
-	.CC_ALU_dataB_InBUS(Scratchpath_MUX_Out_B_Wire),
+	.CC_ALU_dataA_InBUS(Scratchpath_MUX_Out_A),
+	.CC_ALU_dataB_InBUS(Scratchpath_MUX_Out_B),
 	.CC_ALU_selection_InBUS(uDataPath_ALU_Selection_In)
 );
 

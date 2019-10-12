@@ -4,6 +4,7 @@ module SistemaControl #(
 	parameter DATAWIDTH_COND_MIR =3, 
 	parameter DATAWIDTH_BANDERAS=4, 
 	parameter DATAWIDTH_BUS_OUT=2,
+	parameter DATAWIDTH_BUS_REG_IR_OP=8,
 	parameter DATAWIDTH_BUS_REG_MIR_FIELD=6
 )(
 	//////////// INPUT //////////
@@ -14,6 +15,7 @@ module SistemaControl #(
 	SistemaControl_Zero_InLow,
 	SistemaControl_ALU_Flags_Write_PCR,
 	SistemaControl_Reg_IR_IR13,
+	SistemaControl_Reg_IR_OP_In,
 	//////////// OUTPUT //////////
    SistemaControl_ALU_Selection_In,
 	SistemaControl_MUX_A_MIR,
@@ -21,7 +23,9 @@ module SistemaControl #(
 	SistemaControl_MUX_C_MIR,
 	SistemaControl_MUX_A_MIR_Selector,
 	SistemaControl_MUX_B_MIR_Selector,
-	SistemaControl_MUX_C_MIR_Selector
+	SistemaControl_MUX_C_MIR_Selector,
+	SistemaControl_Selector_RD,
+	SistemaControl_Selector_WR
 );
 
 
@@ -37,15 +41,18 @@ module SistemaControl #(
 	input SistemaControl_Zero_InLow;
 	input SistemaControl_ALU_Flags_Write_PCR;
 	input SistemaControl_Reg_IR_IR13;
+	input [DATAWIDTH_BUS_REG_IR_OP-1:0] SistemaControl_Reg_IR_OP_In;
 	
 	//////////// OUTPUT //////////
-	output [DATAWIDTH_ALU_SELECTION-1:0] SistemaControl_ALU_Selection_In;
-	output [DATAWIDTH_BUS_REG_MIR_FIELD-1:0] SistemaControl_MUX_A_MIR;
-	output [DATAWIDTH_BUS_REG_MIR_FIELD-1:0] SistemaControl_MUX_B_MIR;
-	output [DATAWIDTH_BUS_REG_MIR_FIELD-1:0] SistemaControl_MUX_C_MIR;
+	output reg [DATAWIDTH_ALU_SELECTION-1:0] SistemaControl_ALU_Selection_In;
+	output reg [DATAWIDTH_BUS_REG_MIR_FIELD-1:0] SistemaControl_MUX_A_MIR;
+	output reg [DATAWIDTH_BUS_REG_MIR_FIELD-1:0] SistemaControl_MUX_B_MIR;
+	output reg [DATAWIDTH_BUS_REG_MIR_FIELD-1:0] SistemaControl_MUX_C_MIR;
 	output SistemaControl_MUX_A_MIR_Selector;
 	output SistemaControl_MUX_B_MIR_Selector;
 	output SistemaControl_MUX_C_MIR_Selector;
+	output SistemaControl_Selector_RD;
+	output SistemaControl_Selector_WR;
 
 //=======================================================
 //  REG/WIRE declarations

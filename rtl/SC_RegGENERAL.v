@@ -34,7 +34,7 @@ module SC_RegGENERAL #(parameter DATAWIDTH_BUS=32)(
 //=======================================================
 //  PORT declarations
 //=======================================================
-output		[DATAWIDTH_BUS-1:0]	SC_RegGENERAL_DataBUS_Out;
+output   [DATAWIDTH_BUS-1:0]	SC_RegGENERAL_DataBUS_Out;
 input		SC_RegGENERAL_CLOCK_50;
 input		SC_RegGENERAL_RESET_InHigh;
 input		SC_RegGENERAL_Write_InLow;	
