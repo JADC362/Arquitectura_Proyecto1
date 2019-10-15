@@ -1,6 +1,5 @@
 //Módulo principal 
 
-
 //=======================================================
 //  MODULE Definition
 //=======================================================
@@ -49,8 +48,12 @@ module WB_uProcesador #(
 	wire uDataPath_MUX_A_MIR_Selector_Wire;
 	wire uDataPath_MUX_B_MIR_Selector_Wire;
 	wire uDataPath_MUX_C_MIR_Selector_Wire;
-	wire [DATAWIDTH_BUS-1:0] uDataPath_DataMemory_Data_In_Wire;
+	
 	wire uDataPath_DataMemory_Selector_In_Wire;
+	wire uDataPath_DataMemory_WR_Wire;
+	wire [DATAWIDTH_BUS-1:0] uDataPath_DataMemory_Data_In_Wire;
+	wire [DATAWIDTH_BUS-1:0] uDataPath_Scratchpath_MUX_Out_A_Wire;
+	wire [DATAWIDTH_BUS-1:0] uDataPath_Scratchpath_MUX_Out_B_Wire;
 
 uDATAPATH #(
 	.DATAWIDTH_BUS(DATAWIDTH_BUS),
@@ -72,7 +75,6 @@ uDATAPATH #(
 	.uDataPath_ALU_Flags_Write_PCR(uDataPath_ALU_Flags_Write_PCR_Wire),
 	.uDataPath_Reg_IR_OP(uDataPath_Reg_IR_OP_Wire),
 	.uDataPath_Reg_IR_IR13(uDataPath_Reg_IR_IR13),
-	
 	.uDataPath_CLOCK_50(WB_uProcesador_CLOCK_50),
 	.uDATAPATH_RESET_InHigh(WB_uProcesador_Reset_InHigh),
 	.uDataPath_ALU_Selection_In(uDataPath_ALU_Selection_In_Wire),
@@ -83,7 +85,9 @@ uDATAPATH #(
 	.uDataPath_MUX_B_MIR_Selector(uDataPath_MUX_B_MIR_Selector_Wire),
 	.uDataPath_MUX_C_MIR_Selector(uDataPath_MUX_C_MIR_Selector_Wire),
 	.uDataPath_DataMemory_Data_In(uDataPath_DataMemory_Data_In_Wire),
-	.uDataPath_DataMemory_Selector_In(uDataPath_DataMemory_Selector_In_Wire)
+	.uDataPath_DataMemory_Selector_In(uDataPath_DataMemory_Selector_In_Wire),
+	.Scratchpath_MUX_Out_A(uDataPath_Scratchpath_MUX_Out_A_Wire),
+	.Scratchpath_MUX_Out_B(uDataPath_Scratchpath_MUX_Out_B_Wire)
 );
 
 SistemaControl #(
@@ -91,7 +95,8 @@ SistemaControl #(
 	.DATAWIDTH_COND_MIR(DATAWIDTH_COND_MIR),
 	.DATAWIDTH_BANDERAS(DATAWIDTH_BANDERAS),
 	.DATAWIDTH_BUS_OUT_BC(DATAWIDTH_BUS_OUT),
-	.DATAWIDTH_BUS_REG_MIR_FIELD(DATAWIDTH_BUS_REG_MIR_FIELD)
+	.DATAWIDTH_BUS_REG_MIR_FIELD(DATAWIDTH_BUS_REG_MIR_FIELD),
+	.DATAWIDTH_BUS_REG_IR_OP(DATAWIDTH_BUS_REG_IR_OP)
 ) SistemaControl_u0(
 	.SistemaControl_CLOCK_50(WB_uProcesador_CLOCK_50),
 	.SistemaControl_Overflow_InLow(uDataPath_Overflow_InLow_Wire),
@@ -100,15 +105,24 @@ SistemaControl #(
 	.SistemaControl_Zero_InLow(uDataPath_Zero_InLow_Wire),
 	.SistemaControl_ALU_Flags_Write_PCR(uDataPath_ALU_Flags_Write_PCR_Wire),
 	.SistemaControl_Reg_IR_IR13(uDataPath_Reg_IR_IR13),
-	
 	.SistemaControl_ALU_Selection_In(uDataPath_ALU_Selection_In_Wire),
 	.SistemaControl_MUX_A_MIR(uDataPath_MUX_A_MIR_Wire),
 	.SistemaControl_MUX_B_MIR(uDataPath_MUX_B_MIR_Wire),
 	.SistemaControl_MUX_C_MIR(uDataPath_MUX_C_MIR_Wire),
 	.SistemaControl_MUX_A_MIR_Selector(uDataPath_MUX_A_MIR_Selector_Wire),
 	.SistemaControl_MUX_B_MIR_Selector(uDataPath_MUX_B_MIR_Selector_Wire),
-	.SistemaControl_MUX_C_MIR_Selector(uDataPath_MUX_C_MIR_Selector_Wire)
-	
+	.SistemaControl_MUX_C_MIR_Selector(uDataPath_MUX_C_MIR_Selector_Wire),
+	.SistemaControl_Selector_RD(uDataPath_DataMemory_Selector_In_Wire),
+	.SistemaControl_Selector_WR(uDataPath_DataMemory_WR_Wire),
+	.SistemaControl_Reg_IR_OP_In(uDataPath_Reg_IR_OP_Wire)
+);
+
+Data_Memory #(.DATAWIDTH_BUS(DATAWIDTH_BUS)) Data_Memory_u0(
+	.DataMemory_Data_Out(uDataPath_DataMemory_Data_In_Wire),
+	.DataMemory_Selector_RD(uDataPath_DataMemory_Selector_In_Wire),
+	.DataMemory_Selector_WR(uDataPath_DataMemory_WR_Wire),
+	.DataMemory_Address_In(uDataPath_Scratchpath_MUX_Out_A_Wire),
+	.DataMemory_Data_In(uDataPath_Scratchpath_MUX_Out_B_Wire)
 );
 
 endmodule

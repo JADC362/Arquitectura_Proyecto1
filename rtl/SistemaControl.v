@@ -2,12 +2,12 @@
 module SistemaControl #(
 	parameter DATAWIDTH_ALU_SELECTION=4,
 	parameter DATAWIDTH_COND_MIR =3, 
-	parameter DATAWIDTH_BANDERAS=4, 
+	parameter DATAWIDTH_BANDERAS=4,
 	parameter DATAWIDTH_BUS_OUT_BC=2,
 	parameter DATAWIDTH_BUS_REG_MIR_FIELD=6,
 	parameter DATAWIDTH_BUS_MUX=11,
 	parameter DATAWIDTH_BUS_MIR=41,
-	parameter DATAWIDTH_BUS_IR_OPS=8
+	parameter DATAWIDTH_BUS_REG_IR_OP=8
 )(
 	//////////// INPUT //////////
 	SistemaControl_CLOCK_50,
@@ -16,9 +16,9 @@ module SistemaControl #(
 	SistemaControl_Negative_InLow,
 	SistemaControl_Zero_InLow,
 	SistemaControl_ALU_Flags_Write_PCR,
-	SistemaControl_IR_Ops,
 	SistemaControl_Reg_IR_IR13,
 	SistemaControl_RESET_InHigh,
+	SistemaControl_Reg_IR_OP_In,
 	//////////// OUTPUT //////////
    SistemaControl_ALU_Selection_In,
 	SistemaControl_MUX_A_MIR,
@@ -27,8 +27,8 @@ module SistemaControl #(
 	SistemaControl_MUX_A_MIR_Selector,
 	SistemaControl_MUX_B_MIR_Selector,
 	SistemaControl_MUX_C_MIR_Selector,
-	SistemaControl_MM_Read,
-	SistemaControl_MM_Write
+	SistemaControl_Selector_RD,
+	SistemaControl_Selector_WR
 );
 
 
@@ -43,9 +43,9 @@ module SistemaControl #(
 	input SistemaControl_Negative_InLow;
 	input SistemaControl_Zero_InLow;
 	input SistemaControl_ALU_Flags_Write_PCR;
-	input [DATAWIDTH_BUS_IR_OPS-1:0] SistemaControl_IR_Ops;
 	input SistemaControl_Reg_IR_IR13;
 	input SistemaControl_RESET_InHigh;
+	input [DATAWIDTH_BUS_REG_IR_OP-1:0] SistemaControl_Reg_IR_OP_In;
 	
 	//////////// OUTPUT //////////
 	output [DATAWIDTH_ALU_SELECTION-1:0] SistemaControl_ALU_Selection_In;
@@ -55,8 +55,8 @@ module SistemaControl #(
 	output SistemaControl_MUX_A_MIR_Selector;
 	output SistemaControl_MUX_B_MIR_Selector;
 	output SistemaControl_MUX_C_MIR_Selector;
-	output SistemaControl_MM_Read;
-	output SistemaControl_MM_Write;
+	output SistemaControl_Selector_RD;
+	output SistemaControl_Selector_WR;
 
 //=======================================================
 //  REG/WIRE declarations
@@ -131,7 +131,7 @@ CC_MUX_MIM #(
 	.CC_MUX_data_OutBUS(MUX_MIM_Out),
 	//entradas
 	.CC_MUX_Next_InBUS(CSAI_Out),
-	.CC_MUX_Decode_InBUS(SistemaControl_IR_Ops),
+	.CC_MUX_Decode_InBUS(SistemaControl_Reg_IR_OP_In),
 	.CC_MUX_Jump_InBUS(MIR_JumpAddr_Out),
 	.CC_MUX_selection_InBUS(Branch_CONTROL_Out)
 );
@@ -156,8 +156,8 @@ SC_MIR #(
 	.SC_MIR_BMUX_Out(SistemaControl_MUX_B_MIR_Selector),
 	.SC_MIR_C_OutBUS(SistemaControl_MUX_C_MIR),
 	.SC_MIR_CMUX_Out(SistemaControl_MUX_C_MIR_Selector),
-	.SC_MIR_Read_Out(SistemaControl_MM_Read),
-	.SC_MIR_Write_Out(SistemaControl_MM_Write),
+	.SC_MIR_Read_Out(SistemaControl_Selector_RD),
+	.SC_MIR_Write_Out(SistemaControl_Selector_WR),
 	.SC_MIR_ALU_OutBUS(SistemaControl_ALU_Selection_In),
 	.SC_MIR_Cond_OutBUS(MIR_Cond_Out),
 	.SC_MIR_JumpAddr_OutBUS(MIR_JumpAddr_Out),

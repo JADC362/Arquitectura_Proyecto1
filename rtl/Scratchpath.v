@@ -35,13 +35,13 @@ module Scratchpath #(
 //=======================================================
 
 	//////////// OUTPUTS //////////
-	output Scratchpath_Reg_IR_IR13;
-	output [DATAWIDTH_BUS_REG_IR-1:0] Scratchpath_Reg_IR_RS1;
-	output [DATAWIDTH_BUS_REG_IR-1:0] Scratchpath_Reg_IR_RS2;
-	output [DATAWIDTH_BUS_REG_IR-1:0] Scratchpath_Reg_IR_RD;
-	output [DATAWIDTH_BUS_REG_IR_OP-1:0] Scratchpath_Reg_IR_OP;
-	output [DATAWIDTH_BUS-1:0] Scratchpath_MUX_Out_A;
-	output [DATAWIDTH_BUS-1:0] Scratchpath_MUX_Out_B;
+	output  Scratchpath_Reg_IR_IR13;
+	output  [DATAWIDTH_BUS_REG_IR-1:0] Scratchpath_Reg_IR_RS1;
+	output  [DATAWIDTH_BUS_REG_IR-1:0] Scratchpath_Reg_IR_RS2;
+	output  [DATAWIDTH_BUS_REG_IR-1:0] Scratchpath_Reg_IR_RD;
+	output  [DATAWIDTH_BUS_REG_IR_OP-1:0] Scratchpath_Reg_IR_OP;
+	output  [DATAWIDTH_BUS-1:0] Scratchpath_MUX_Out_A;
+	output  [DATAWIDTH_BUS-1:0] Scratchpath_MUX_Out_B;
 
 	//////////// INPUTS //////////
 	input uDataPath_CLOCK_50;

@@ -27,12 +27,11 @@ module SC_RegGENERAL_IR #(
 //  PORT declarations
 //=======================================================
 	output reg	[DATAWIDTH_BUS-1:0] SC_RegGENERAL_DataBUS_Out;
-	
 	output reg  [DATAWIDTH_BUS_REG_IR-1:0] SC_ReGENERAL_DataBUS_RS1;
 	output reg  [DATAWIDTH_BUS_REG_IR-1:0] SC_ReGENERAL_DataBUS_RS2;
 	output reg  [DATAWIDTH_BUS_REG_IR-1:0] SC_ReGENERAL_DataBUS_RD;
 	output reg 	[DATAWIDTH_BUS_REG_IR_OP-1:0] SC_ReGENERAL_DataBUS_OP;
-	output reg SC_ReGENERAL_DataBUS_IR13;
+	output reg  SC_ReGENERAL_DataBUS_IR13;
 	
 	input			SC_RegGENERAL_CLOCK_50;
 	input			SC_RegGENERAL_Write_InLow;
