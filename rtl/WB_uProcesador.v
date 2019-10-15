@@ -90,7 +90,7 @@ SistemaControl #(
 	.DATAWIDTH_ALU_SELECTION(DATAWIDTH_ALU_SELECTION),
 	.DATAWIDTH_COND_MIR(DATAWIDTH_COND_MIR),
 	.DATAWIDTH_BANDERAS(DATAWIDTH_BANDERAS),
-	.DATAWIDTH_BUS_OUT(DATAWIDTH_BUS_OUT),
+	.DATAWIDTH_BUS_OUT_BC(DATAWIDTH_BUS_OUT),
 	.DATAWIDTH_BUS_REG_MIR_FIELD(DATAWIDTH_BUS_REG_MIR_FIELD)
 ) SistemaControl_u0(
 	.SistemaControl_CLOCK_50(WB_uProcesador_CLOCK_50),
@@ -107,7 +107,7 @@ SistemaControl #(
 	.SistemaControl_MUX_C_MIR(uDataPath_MUX_C_MIR_Wire),
 	.SistemaControl_MUX_A_MIR_Selector(uDataPath_MUX_A_MIR_Selector_Wire),
 	.SistemaControl_MUX_B_MIR_Selector(uDataPath_MUX_B_MIR_Selector_Wire),
-	.SistemaControl_MUX_C_MIR_Selector(uDataPath_MUX_C_MIR_Selector_Wire),
+	.SistemaControl_MUX_C_MIR_Selector(uDataPath_MUX_C_MIR_Selector_Wire)
 	
 );
 

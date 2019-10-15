@@ -3,8 +3,11 @@ module SistemaControl #(
 	parameter DATAWIDTH_ALU_SELECTION=4,
 	parameter DATAWIDTH_COND_MIR =3, 
 	parameter DATAWIDTH_BANDERAS=4, 
-	parameter DATAWIDTH_BUS_OUT=2,
-	parameter DATAWIDTH_BUS_REG_MIR_FIELD=6
+	parameter DATAWIDTH_BUS_OUT_BC=2,
+	parameter DATAWIDTH_BUS_REG_MIR_FIELD=6,
+	parameter DATAWIDTH_BUS_MUX=11,
+	parameter DATAWIDTH_BUS_MIR=41,
+	parameter DATAWIDTH_BUS_IR_OPS=8
 )(
 	//////////// INPUT //////////
 	SistemaControl_CLOCK_50,
@@ -13,7 +16,9 @@ module SistemaControl #(
 	SistemaControl_Negative_InLow,
 	SistemaControl_Zero_InLow,
 	SistemaControl_ALU_Flags_Write_PCR,
+	SistemaControl_IR_Ops,
 	SistemaControl_Reg_IR_IR13,
+	SistemaControl_RESET_InHigh,
 	//////////// OUTPUT //////////
    SistemaControl_ALU_Selection_In,
 	SistemaControl_MUX_A_MIR,
@@ -21,7 +26,9 @@ module SistemaControl #(
 	SistemaControl_MUX_C_MIR,
 	SistemaControl_MUX_A_MIR_Selector,
 	SistemaControl_MUX_B_MIR_Selector,
-	SistemaControl_MUX_C_MIR_Selector
+	SistemaControl_MUX_C_MIR_Selector,
+	SistemaControl_MM_Read,
+	SistemaControl_MM_Write
 );
 
 
@@ -36,7 +43,9 @@ module SistemaControl #(
 	input SistemaControl_Negative_InLow;
 	input SistemaControl_Zero_InLow;
 	input SistemaControl_ALU_Flags_Write_PCR;
+	input [DATAWIDTH_BUS_IR_OPS-1:0] SistemaControl_IR_Ops;
 	input SistemaControl_Reg_IR_IR13;
+	input SistemaControl_RESET_InHigh;
 	
 	//////////// OUTPUT //////////
 	output [DATAWIDTH_ALU_SELECTION-1:0] SistemaControl_ALU_Selection_In;
@@ -46,6 +55,8 @@ module SistemaControl #(
 	output SistemaControl_MUX_A_MIR_Selector;
 	output SistemaControl_MUX_B_MIR_Selector;
 	output SistemaControl_MUX_C_MIR_Selector;
+	output SistemaControl_MM_Read;
+	output SistemaControl_MM_Write;
 
 //=======================================================
 //  REG/WIRE declarations
@@ -57,9 +68,22 @@ module SistemaControl #(
 	wire [DATAWIDTH_ALU_SELECTION-1:0] Psr_Out ;
 
 //WIRES CSAI
+	wire [DATAWIDTH_BUS_MUX-1:0] CSAI_Out;
 
 //WIRES BRANCH CONTROL
+	wire [DATAWIDTH_BUS_OUT_BC-1:0] Branch_CONTROL_Out;
 
+//WIRES MUX MIM
+	wire [DATAWIDTH_BUS_MUX-1:0] MUX_MIM_Out;
+
+//WIRES MIM
+	wire [DATAWIDTH_BUS_MIR-1:0] MIM_Out;
+	
+//WIRES MIR
+	wire [DATAWIDTH_BUS_MUX-1:0] MIR_JumpAddr_Out;
+	wire [DATAWIDTH_COND_MIR-1:0] MIR_Cond_Out;
+
+//WIRES 
 
 //=======================================================
 //  Structural coding
@@ -69,10 +93,9 @@ SC_CSAI CSAI(
 
 	//entradas
 	.SC_CSAI_CLOCK_50(SistemaControl_CLOCK_50),
-//	.CSAI_DATA_INPUT()
+	.CSAI_DATA_INPUT(MUX_MIM_Out),
 	//Salidas
-// .CSAI_DATA_OUTPUT()
-	
+	.CSAI_DATA_OUTPUT(CSAI_Out)
 );
 
 
@@ -91,16 +114,57 @@ SC_Psr #(.DATAWIDTH_ALU_SELECTION(DATAWIDTH_ALU_SELECTION))Psr(
 CC_branchControl #(
 	.DATAWIDTH_COND_MIR(DATAWIDTH_COND_MIR),
 	.DATAWIDTH_BANDERAS(DATAWIDTH_BANDERAS),
-	.DATAWIDTH_BUS_OUT(DATAWIDTH_BUS_OUT)
+	.DATAWIDTH_BUS_OUT(DATAWIDTH_BUS_OUT_BC)
 )branchControl(
 	// salida
-//	.Brach_output(),
+	.Brach_output(Branch_CONTROL_Out),
 	//entradas
 	.Branch_Flags(Psr_Out),
 	.Branch_Ir13(SistemaControl_Reg_IR_IR13),
-//	.Branch_Condition()
+	.Branch_Condition(MIR_Cond_Out)
 );
 
+CC_MUX_MIM #(
+	.DATAWIDTH_BUS(DATAWIDTH_BUS_MUX)
+)MUX_MIM(
+	//salidas
+	.CC_MUX_data_OutBUS(MUX_MIM_Out),
+	//entradas
+	.CC_MUX_Next_InBUS(CSAI_Out),
+	.CC_MUX_Decode_InBUS(SistemaControl_IR_Ops),
+	.CC_MUX_Jump_InBUS(MIR_JumpAddr_Out),
+	.CC_MUX_selection_InBUS(Branch_CONTROL_Out)
+);
 
+CC_MIM_ControlStore #(
+	.DATAWIDTH_OUTPUT_BUS(DATAWIDTH_BUS_MIR),
+	.DATAWIDTH_INPUT_BUS(DATAWIDTH_BUS_MUX)
+)MIM_ControlStore(
+	//salidas
+	.CC_MIM_ControlStore_data_OutBUS(MIM_Out),
+	//entradas
+	.CC_MIM_ControlStore_data_InBUS(MUX_MIM_Out)
+);
+
+SC_MIR #(
+	.MIR_DATAWIDTH(DATAWIDTH_BUS_MIR)
+)MIR(
+	//salidas
+	.SC_MIR_A_OutBUS(SistemaControl_MUX_A_MIR),
+	.SC_MIR_AMUX_Out(SistemaControl_MUX_A_MIR_Selector),
+	.SC_MIR_B_OutBUS(SistemaControl_MUX_B_MIR),
+	.SC_MIR_BMUX_Out(SistemaControl_MUX_B_MIR_Selector),
+	.SC_MIR_C_OutBUS(SistemaControl_MUX_C_MIR),
+	.SC_MIR_CMUX_Out(SistemaControl_MUX_C_MIR_Selector),
+	.SC_MIR_Read_Out(SistemaControl_MM_Read),
+	.SC_MIR_Write_Out(SistemaControl_MM_Write),
+	.SC_MIR_ALU_OutBUS(SistemaControl_ALU_Selection_In),
+	.SC_MIR_Cond_OutBUS(MIR_Cond_Out),
+	.SC_MIR_JumpAddr_OutBUS(MIR_JumpAddr_Out),
+	//entradas
+	.SC_MIR_CLOCK_50(SistemaControl_CLOCK_50),
+	.SC_MIR_RESET_InHigh(SistemaControl_RESET_InHigh),
+	.SC_MIR_data_InBUS(MIM_Out)
+);
 
 endmodule
