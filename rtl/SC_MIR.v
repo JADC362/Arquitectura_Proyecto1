@@ -14,6 +14,7 @@ module SC_MIR #(parameter MIR_DATAWIDTH=41)(
 	//////////// INPUTS //////////
 	SC_MIR_CLOCK_50,
 	SC_MIR_RESET_InHigh,
+	SC_MIR_clear_InLow,
 	SC_MIR_data_InBUS
 );
 //=======================================================
@@ -36,6 +37,7 @@ output		[2:0]	SC_MIR_Cond_OutBUS;
 output		[10:0]	SC_MIR_JumpAddr_OutBUS;
 input		SC_MIR_CLOCK_50;
 input		SC_MIR_RESET_InHigh;
+input		SC_MIR_clear_InLow;	
 input		[MIR_DATAWIDTH-1:0]	SC_MIR_data_InBUS;
 
 //=======================================================
@@ -49,8 +51,11 @@ reg [MIR_DATAWIDTH-1:0] MIR_Signal;
 //INPUT LOGIC: COMBINATIONAL
 always @(*)
 begin
-	MIR_Signal = SC_MIR_data_InBUS;
-end	
+	if (SC_MIR_clear_InLow == 1'b0)
+		MIR_Signal = 0;
+	else
+		MIR_Signal = SC_MIR_data_InBUS;
+	end	
 //STATE REGISTER: SEQUENTIAL
 always @(posedge SC_MIR_CLOCK_50, posedge SC_MIR_RESET_InHigh)
 begin

@@ -14,7 +14,7 @@ module SC_Psr #(
 	SC_Psr_carry,
 	SC_Psr_Write_InLow,
 	//// OUTPUT ///
-	SC_Psr_Out
+	SC_Psr_Out,
 );
 
 //=======================================================

@@ -1,0 +1,28 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do BB_SYSTEM_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/Computación/Programación/Verilog/Arquitectura/PRJ0_uDATAPATH_1/rtl {D:/Computación/Programación/Verilog/Arquitectura/PRJ0_uDATAPATH_1/rtl/uDATAPATH.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:59:10 on Sep 25,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Computación/Programación/Verilog/Arquitectura/PRJ0_uDATAPATH_1/rtl" D:/Computación/Programación/Verilog/Arquitectura/PRJ0_uDATAPATH_1/rtl/uDATAPATH.v 
+# init_dbinfo() DATABASE ERROR: (sqlite3_open D:/Computación/Programación/Verilog/Arquitectura/PRJ0_uDATAPATH_1/simulation/modelsim/rtl_work/_lib.qdb): unable to open database file
+# mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+# ** Fatal: (vlog-9) Problem while writing token file "D:/Computación/Programación/Verilog/Arquitectura/PRJ0_uDATAPATH_1/simulation/modelsim/rtl_work/_temp/vlog8krhi8".
+# El sistema no puede encontrar la ruta especificada. (GetLastError() = 3)
+# ** Error: D:/Computación/Programación/Verilog/Arquitectura/PRJ0_uDATAPATH_1/rtl/uDATAPATH.v(21): Verilog Compiler exiting
+# End time: 08:59:11 on Sep 25,2019, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./BB_SYSTEM_run_msim_rtl_verilog.do line 8
+# C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+D:/Computación/Programación/Verilog/Arquitectura/PRJ0_uDATAPATH_1/rtl {D:/Computación/Programación/Verilog/Arqui..."
