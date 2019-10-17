@@ -1,4 +1,4 @@
-module CC_MUX_MIM #(parameter DATAWIDTH_MUX_SELECTION=2, parameter DATAWIDTH_OUTPUT_BUS=41, parameter DATAWIDTH_INPUT_BUS=11)(
+module CC_MUX_MIM #(parameter DATAWIDTH_MUX_SELECTION=2, parameter DATAWIDTH_BUS=11)(
 	//////////// OUTPUTS //////////
 	CC_MUX_data_OutBUS,
 	//////////// INPUTS //////////
@@ -14,10 +14,10 @@ module CC_MUX_MIM #(parameter DATAWIDTH_MUX_SELECTION=2, parameter DATAWIDTH_OUT
 //=======================================================
 //  PORT declarations
 //=======================================================
-output reg	[DATAWIDTH_OUTPUT_BUS-1:0] CC_MUX_data_OutBUS;
-input			[DATAWIDTH_INPUT_BUS-1:0] CC_MUX_Next_InBUS;
-input			[DATAWIDTH_INPUT_BUS-4:0] CC_MUX_Decode_InBUS;
-input			[DATAWIDTH_INPUT_BUS-1:0] CC_MUX_Jump_InBUS;
+output reg	[DATAWIDTH_BUS-1:0] CC_MUX_data_OutBUS;
+input			[DATAWIDTH_BUS-1:0] CC_MUX_Next_InBUS;
+input			[DATAWIDTH_BUS-4:0] CC_MUX_Decode_InBUS;
+input			[DATAWIDTH_BUS-1:0] CC_MUX_Jump_InBUS;
 input			[DATAWIDTH_MUX_SELECTION-1:0] CC_MUX_selection_InBUS;
 //=======================================================
 //  REG/WIRE declarations

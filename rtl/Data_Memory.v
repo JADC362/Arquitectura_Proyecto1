@@ -36,9 +36,21 @@ module Data_Memory #(DATAWIDTH_BUS=32)(
 always @(*)
 begin
 	case(DataMemory_Address_In)
-		32'b00000000000000000000000000000000:DataMemory_Data_Out=32'b00000000000000000000000000000000;
+		32'h00000000:DataMemory_Data_Out=8'h00000000;
+		32'h00000004:DataMemory_Data_Out=8'h00000001;
+		32'h00000008:DataMemory_Data_Out=8'h0000000a;
+		32'h00000800:DataMemory_Data_Out=8'hc2002004;
+		32'h00000804:DataMemory_Data_Out=8'hc8002008;
+		32'h00000808:DataMemory_Data_Out=8'h88810000;
+		32'h0000080c:DataMemory_Data_Out=8'h02800007;
+		32'h00000810:DataMemory_Data_Out=8'h86804002;
+		32'h00000814:DataMemory_Data_Out=8'h8280a000;
+		32'h00000818:DataMemory_Data_Out=8'h8480e000;
+		32'h0000081c:DataMemory_Data_Out=8'h88813fff;
+		32'h00000820:DataMemory_Data_Out=8'h02800002;
+		32'h00000824:DataMemory_Data_Out=8'h10bffffb;
 	
-		default: DataMemory_Data_Out=32'b00000000000000000000000000000000; 
+		default: DataMemory_Data_Out=8'h00000000; 
 	endcase
 end
 
