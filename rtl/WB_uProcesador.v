@@ -39,8 +39,8 @@ module WB_uProcesador #(
 	wire  uDataPath_Carry_InLow_Wire;
 	wire  uDataPath_Negative_InLow_Wire;
 	wire  uDataPath_Zero_InLow_Wire;
-	wire  uDataPath_ALU_Flags_Write_PCR_Wire;
-	wire  uDataPath_Reg_IR_OP_Wire;
+	wire  [DATAWIDTH_BANDERAS-1:0] uDataPath_ALU_Flags_Write_PCR_Wire;
+	wire  [DATAWIDTH_BUS_REG_IR_OP-1:0] uDataPath_Reg_IR_OP_Wire;
 	wire  uDataPath_Reg_IR_IR13;
 	
 	wire [DATAWIDTH_ALU_SELECTION-1:0] uDataPath_ALU_Selection_In_Wire;
