@@ -44,7 +44,7 @@ output 			CC_ALU_overflow_OutLow;
 output 			CC_ALU_carry_OutLow;
 output 			CC_ALU_negative_OutLow;
 output 			CC_ALU_zero_OutLow;
-output  			CC_ALU_Set_Flags_Out;
+output reg		CC_ALU_Set_Flags_Out;
 output reg		[DATAWIDTH_BUS-1:0] CC_ALU_data_OutBUS;
 
 //////////// INPUTS //////////
@@ -64,24 +64,81 @@ wire addition1;		// Variable usada para la operación suma y para determinar las
 always@(*)
 begin
 	case (CC_ALU_selection_InBUS)	
-		4'b0000:  CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS; 					//BUSA
-		4'b0001:  CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS | CC_ALU_dataB_InBUS;	//OR
-		4'b0010:  CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS & CC_ALU_dataB_InBUS;	//AND
-		4'b0011:  CC_ALU_data_OutBUS = ~CC_ALU_dataA_InBUS;					//NOT
-		4'b0100:  CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS ^ CC_ALU_dataB_InBUS;	//XOR
-		4'b0101:  CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS;					//BUSA Can be other function
-		4'b0110:  CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS;					//BUSA Can be other function
-		4'b0111:  CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS;					//BUSA Can be other function
-
-		4'b1000:  CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS + CC_ALU_dataB_InBUS;	//ADD
-		4'b1001:  CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS - CC_ALU_dataB_InBUS;	//SUB
-		4'b1010:  CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS + 1'b1;				//INCREMENT A
-		4'b1011:  CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS - 1'b1;				//DECREMENT A
-		4'b1100:  CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS;					//BUSA Can be other function
-		4'b1101:  CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS;					//BUSA Can be other function
-		4'b1110:  CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS;					//BUSA Can be other function
-		4'b1111:  CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS;					//BUSA DO NOTHING!!!!!!!!		
-		default :  CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS; // channel 0 is selected
+		4'b0000:  begin
+			 CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS & CC_ALU_dataB_InBUS;	//ANDCC
+			 CC_ALU_Set_Flags_Out = 1'b0;
+			 end
+		4'b0001:  begin
+			 CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS | CC_ALU_dataB_InBUS;	//ORCC
+			 CC_ALU_Set_Flags_Out = 1'b0;
+			 end
+		4'b0010:  begin
+			 CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS | CC_ALU_dataB_InBUS; //NORCC
+			 CC_ALU_Set_Flags_Out = 1'b0;
+			end
+		4'b0011:  begin
+			 CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS + CC_ALU_dataB_InBUS;	//ADDCC
+			 CC_ALU_Set_Flags_Out = 1'b0;
+			 end
+		4'b0100:  begin
+			 CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS;	//SRL
+			 CC_ALU_Set_Flags_Out = 1'b1;
+			 end
+		4'b0101:  begin
+			 CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS & CC_ALU_dataB_InBUS;	 //AND
+			 CC_ALU_Set_Flags_Out = 1'b1;
+			 end
+		4'b0110:  begin
+			 CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS | CC_ALU_dataB_InBUS;	 //OR
+			 CC_ALU_Set_Flags_Out = 1'b1;
+			 end
+		4'b0111:  begin
+			 CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS | CC_ALU_dataB_InBUS;	//NOR
+			 CC_ALU_Set_Flags_Out = 1'b1;
+			 end
+		4'b1000:  begin
+			 CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS + CC_ALU_dataB_InBUS;	//ADD
+			 CC_ALU_Set_Flags_Out = 1'b1;
+			 end
+		4'b1001:  begin
+			 CC_ALU_data_OutBUS = {CC_ALU_dataA_InBUS[DATAWIDTH_BUS-3:0], 2'b00};	//LSHIFT2
+			 CC_ALU_Set_Flags_Out = 1'b1;
+			 end
+		4'b1010:  begin
+			 CC_ALU_data_OutBUS = {CC_ALU_dataA_InBUS[DATAWIDTH_BUS-11:0], 10'b0000000000};	//LSHIFT10
+			 CC_ALU_Set_Flags_Out = 1'b1;
+			 end
+		4'b1011:  begin
+			 CC_ALU_data_OutBUS = {19'b0000000000000000000,CC_ALU_dataA_InBUS[DATAWIDTH_BUS-20:0]}; //SIMM13
+			 CC_ALU_Set_Flags_Out = 1'b1;
+			 end
+		4'b1100:  begin
+				if(CC_ALU_dataA_InBUS[12]==1) begin //SEXT13 
+						CC_ALU_data_OutBUS = {19'b1111111111111111111, CC_ALU_dataA_InBUS[12:0]};
+						CC_ALU_Set_Flags_Out = 1'b1;
+					end
+				else
+					begin
+						CC_ALU_data_OutBUS = {19'b0000000000000000000, CC_ALU_dataA_InBUS[12:0]};
+						CC_ALU_Set_Flags_Out = 1'b1;
+					end
+			 end
+		4'b1101:  begin
+			 CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS + 1'b1;		//INC
+			 CC_ALU_Set_Flags_Out = 1'b1;
+			 end
+		4'b1110:  begin
+			 CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS + 3'b100;		//INCPC
+			 CC_ALU_Set_Flags_Out = 1'b1;
+			 end
+		4'b1111:  begin
+			 CC_ALU_data_OutBUS = {CC_ALU_dataA_InBUS[4:0], CC_ALU_dataA_InBUS[DATAWIDTH_BUS-1:5]};	//RSHIFT5
+			 CC_ALU_Set_Flags_Out = 1'b1;
+			 end	
+		default : begin 
+				CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS; // Default
+				CC_ALU_Set_Flags_Out = 1'b1;
+			end
 	endcase
 end
 //=======================================================
