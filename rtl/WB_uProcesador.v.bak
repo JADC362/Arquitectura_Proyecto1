@@ -29,7 +29,7 @@ module WB_uProcesador #(
 //=======================================================
 	input 	WB_uProcesador_CLOCK_50;
 	input 	WB_uProcesador_Reset_InHigh;
-	input 	[DATAWIDTH_BUS-1:0] DataMemory_Cont;
+	input 	DataMemory_Cont;
 	
 //=======================================================
 //  REG/WIRE declarations

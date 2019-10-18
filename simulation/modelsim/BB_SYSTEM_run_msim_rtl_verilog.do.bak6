@@ -30,4 +30,4 @@ vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/simulation/modelsim {C
 
 vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  BB_SYSTEM_vlg_tst
 
-do C:/PRJ0_uDATAPATH_1/simulation/modelsim/BB_SYSTEM.do
+do C:/PRJ0_uDATAPATH_1/simulation/modelsim/TB_SYSTEM.do

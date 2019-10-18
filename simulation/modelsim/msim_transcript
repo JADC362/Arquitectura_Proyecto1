@@ -10,19 +10,328 @@
 # Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+D:/Computación/Programación/Verilog/Arquitectura/PRJ0_uDATAPATH_1/rtl {D:/Computación/Programación/Verilog/Arquitectura/PRJ0_uDATAPATH_1/rtl/uDATAPATH.v}
+# vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/rtl {C:/PRJ0_uDATAPATH_1/rtl/WB_uProcesador.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 08:59:10 on Sep 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Computación/Programación/Verilog/Arquitectura/PRJ0_uDATAPATH_1/rtl" D:/Computación/Programación/Verilog/Arquitectura/PRJ0_uDATAPATH_1/rtl/uDATAPATH.v 
-# init_dbinfo() DATABASE ERROR: (sqlite3_open D:/Computación/Programación/Verilog/Arquitectura/PRJ0_uDATAPATH_1/simulation/modelsim/rtl_work/_lib.qdb): unable to open database file
-# mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
-# ** Fatal: (vlog-9) Problem while writing token file "D:/Computación/Programación/Verilog/Arquitectura/PRJ0_uDATAPATH_1/simulation/modelsim/rtl_work/_temp/vlog8krhi8".
-# El sistema no puede encontrar la ruta especificada. (GetLastError() = 3)
-# ** Error: D:/Computación/Programación/Verilog/Arquitectura/PRJ0_uDATAPATH_1/rtl/uDATAPATH.v(21): Verilog Compiler exiting
-# End time: 08:59:11 on Sep 25,2019, Elapsed time: 0:00:01
-# Errors: 2, Warnings: 0
-# ** Error: C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./BB_SYSTEM_run_msim_rtl_verilog.do line 8
-# C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog -vlog01compat -work work +incdir+D:/Computación/Programación/Verilog/Arquitectura/PRJ0_uDATAPATH_1/rtl {D:/Computación/Programación/Verilog/Arqui..."
+# Start time: 19:19:05 on Oct 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/PRJ0_uDATAPATH_1/rtl" C:/PRJ0_uDATAPATH_1/rtl/WB_uProcesador.v 
+# -- Compiling module WB_uProcesador
+# 
+# Top level modules:
+# 	WB_uProcesador
+# End time: 19:19:05 on Oct 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/rtl {C:/PRJ0_uDATAPATH_1/rtl/uDataPath.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:19:05 on Oct 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/PRJ0_uDATAPATH_1/rtl" C:/PRJ0_uDATAPATH_1/rtl/uDataPath.v 
+# -- Compiling module uDATAPATH
+# 
+# Top level modules:
+# 	uDATAPATH
+# End time: 19:19:05 on Oct 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/rtl {C:/PRJ0_uDATAPATH_1/rtl/SistemaControl.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:19:05 on Oct 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/PRJ0_uDATAPATH_1/rtl" C:/PRJ0_uDATAPATH_1/rtl/SistemaControl.v 
+# -- Compiling module SistemaControl
+# 
+# Top level modules:
+# 	SistemaControl
+# End time: 19:19:05 on Oct 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/rtl {C:/PRJ0_uDATAPATH_1/rtl/Scratchpath.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:19:05 on Oct 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/PRJ0_uDATAPATH_1/rtl" C:/PRJ0_uDATAPATH_1/rtl/Scratchpath.v 
+# -- Compiling module Scratchpath
+# 
+# Top level modules:
+# 	Scratchpath
+# End time: 19:19:05 on Oct 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/rtl {C:/PRJ0_uDATAPATH_1/rtl/SC_RegGENERAL_IR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:19:05 on Oct 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/PRJ0_uDATAPATH_1/rtl" C:/PRJ0_uDATAPATH_1/rtl/SC_RegGENERAL_IR.v 
+# -- Compiling module SC_RegGENERAL_IR
+# 
+# Top level modules:
+# 	SC_RegGENERAL_IR
+# End time: 19:19:05 on Oct 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/rtl {C:/PRJ0_uDATAPATH_1/rtl/SC_RegGENERAL.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:19:05 on Oct 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/PRJ0_uDATAPATH_1/rtl" C:/PRJ0_uDATAPATH_1/rtl/SC_RegGENERAL.v 
+# -- Compiling module SC_RegGENERAL
+# 
+# Top level modules:
+# 	SC_RegGENERAL
+# End time: 19:19:05 on Oct 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/rtl {C:/PRJ0_uDATAPATH_1/rtl/SC_RegFIXED.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:19:05 on Oct 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/PRJ0_uDATAPATH_1/rtl" C:/PRJ0_uDATAPATH_1/rtl/SC_RegFIXED.v 
+# -- Compiling module SC_RegFIXED
+# 
+# Top level modules:
+# 	SC_RegFIXED
+# End time: 19:19:05 on Oct 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/rtl {C:/PRJ0_uDATAPATH_1/rtl/SC_Psr.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:19:05 on Oct 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/PRJ0_uDATAPATH_1/rtl" C:/PRJ0_uDATAPATH_1/rtl/SC_Psr.v 
+# -- Compiling module SC_Psr
+# 
+# Top level modules:
+# 	SC_Psr
+# End time: 19:19:05 on Oct 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/rtl {C:/PRJ0_uDATAPATH_1/rtl/SC_MIR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:19:05 on Oct 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/PRJ0_uDATAPATH_1/rtl" C:/PRJ0_uDATAPATH_1/rtl/SC_MIR.v 
+# -- Compiling module SC_MIR
+# 
+# Top level modules:
+# 	SC_MIR
+# End time: 19:19:05 on Oct 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/rtl {C:/PRJ0_uDATAPATH_1/rtl/SC_CSAI.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:19:06 on Oct 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/PRJ0_uDATAPATH_1/rtl" C:/PRJ0_uDATAPATH_1/rtl/SC_CSAI.v 
+# -- Compiling module SC_CSAI
+# 
+# Top level modules:
+# 	SC_CSAI
+# End time: 19:19:06 on Oct 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/rtl {C:/PRJ0_uDATAPATH_1/rtl/MUX_Datapath.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:19:06 on Oct 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/PRJ0_uDATAPATH_1/rtl" C:/PRJ0_uDATAPATH_1/rtl/MUX_Datapath.v 
+# -- Compiling module MUX_Datapath
+# 
+# Top level modules:
+# 	MUX_Datapath
+# End time: 19:19:06 on Oct 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/rtl {C:/PRJ0_uDATAPATH_1/rtl/MUX_C.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:19:06 on Oct 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/PRJ0_uDATAPATH_1/rtl" C:/PRJ0_uDATAPATH_1/rtl/MUX_C.v 
+# -- Compiling module MUX_C
+# 
+# Top level modules:
+# 	MUX_C
+# End time: 19:19:06 on Oct 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/rtl {C:/PRJ0_uDATAPATH_1/rtl/Data_Memory.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:19:06 on Oct 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/PRJ0_uDATAPATH_1/rtl" C:/PRJ0_uDATAPATH_1/rtl/Data_Memory.v 
+# -- Compiling module Data_Memory
+# ** Warning: C:/PRJ0_uDATAPATH_1/rtl/Data_Memory.v(55): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	Data_Memory
+# End time: 19:19:06 on Oct 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/rtl {C:/PRJ0_uDATAPATH_1/rtl/CC_MUXX.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:19:06 on Oct 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/PRJ0_uDATAPATH_1/rtl" C:/PRJ0_uDATAPATH_1/rtl/CC_MUXX.v 
+# -- Compiling module CC_MUXX
+# 
+# Top level modules:
+# 	CC_MUXX
+# End time: 19:19:06 on Oct 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/rtl {C:/PRJ0_uDATAPATH_1/rtl/CC_MUX_MIM.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:19:06 on Oct 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/PRJ0_uDATAPATH_1/rtl" C:/PRJ0_uDATAPATH_1/rtl/CC_MUX_MIM.v 
+# -- Compiling module CC_MUX_MIM
+# 
+# Top level modules:
+# 	CC_MUX_MIM
+# End time: 19:19:06 on Oct 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/rtl {C:/PRJ0_uDATAPATH_1/rtl/CC_MIM_ControlStore.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:19:06 on Oct 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/PRJ0_uDATAPATH_1/rtl" C:/PRJ0_uDATAPATH_1/rtl/CC_MIM_ControlStore.v 
+# -- Compiling module CC_MIM_ControlStore
+# 
+# Top level modules:
+# 	CC_MIM_ControlStore
+# End time: 19:19:06 on Oct 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/rtl {C:/PRJ0_uDATAPATH_1/rtl/CC_DECODER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:19:06 on Oct 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/PRJ0_uDATAPATH_1/rtl" C:/PRJ0_uDATAPATH_1/rtl/CC_DECODER.v 
+# -- Compiling module CC_DECODER
+# 
+# Top level modules:
+# 	CC_DECODER
+# End time: 19:19:06 on Oct 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/rtl {C:/PRJ0_uDATAPATH_1/rtl/CC_branchControl.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:19:06 on Oct 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/PRJ0_uDATAPATH_1/rtl" C:/PRJ0_uDATAPATH_1/rtl/CC_branchControl.v 
+# -- Compiling module CC_branchControl
+# 
+# Top level modules:
+# 	CC_branchControl
+# End time: 19:19:06 on Oct 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/rtl {C:/PRJ0_uDATAPATH_1/rtl/CC_ALU.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:19:06 on Oct 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/PRJ0_uDATAPATH_1/rtl" C:/PRJ0_uDATAPATH_1/rtl/CC_ALU.v 
+# -- Compiling module CC_ALU
+# 
+# Top level modules:
+# 	CC_ALU
+# End time: 19:19:07 on Oct 17,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1 {C:/PRJ0_uDATAPATH_1/bb_system.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:19:07 on Oct 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/PRJ0_uDATAPATH_1" C:/PRJ0_uDATAPATH_1/bb_system.v 
+# -- Compiling module BB_SYSTEM
+# 
+# Top level modules:
+# 	BB_SYSTEM
+# End time: 19:19:07 on Oct 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/simulation/modelsim {C:/PRJ0_uDATAPATH_1/simulation/modelsim/BB_SYSTEM.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:19:07 on Oct 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/PRJ0_uDATAPATH_1/simulation/modelsim" C:/PRJ0_uDATAPATH_1/simulation/modelsim/BB_SYSTEM.vt 
+# -- Compiling module BB_SYSTEM_vlg_tst
+# 
+# Top level modules:
+# 	BB_SYSTEM_vlg_tst
+# End time: 19:19:07 on Oct 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  BB_SYSTEM_vlg_tst
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" BB_SYSTEM_vlg_tst 
+# Start time: 19:19:07 on Oct 17,2019
+# Loading work.BB_SYSTEM_vlg_tst
+# Loading work.BB_SYSTEM
+# Loading work.WB_uProcesador
+# Loading work.uDATAPATH
+# Loading work.Scratchpath
+# Loading work.SC_RegFIXED
+# Loading work.SC_RegGENERAL
+# Loading work.SC_RegGENERAL_IR
+# Loading work.CC_DECODER
+# Loading work.CC_MUXX
+# Loading work.CC_ALU
+# Loading work.MUX_Datapath
+# Loading work.MUX_C
+# Loading work.SistemaControl
+# Loading work.SC_CSAI
+# Loading work.SC_Psr
+# Loading work.CC_branchControl
+# Loading work.CC_MUX_MIM
+# Loading work.CC_MIM_ControlStore
+# Loading work.SC_MIR
+# Loading work.Data_Memory
+# ** Warning: (vsim-3015) C:/PRJ0_uDATAPATH_1/rtl/WB_uProcesador.v(71): [PCDPC] - Port size (8) does not match connection size (1) for port 'uDataPath_Reg_IR_OP'. The port definition is at: C:/PRJ0_uDATAPATH_1/rtl/uDataPath.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0 File: C:/PRJ0_uDATAPATH_1/rtl/uDataPath.v
+# ** Warning: (vsim-3015) C:/PRJ0_uDATAPATH_1/rtl/uDataPath.v(152): [PCDPC] - Port size (6) does not match connection size (4) for port 'CC_MUX_DataBUS_Out'. The port definition is at: C:/PRJ0_uDATAPATH_1/rtl/MUX_Datapath.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/MUX_Datapath_A File: C:/PRJ0_uDATAPATH_1/rtl/MUX_Datapath.v
+# ** Warning: (vsim-3015) C:/PRJ0_uDATAPATH_1/rtl/uDataPath.v(165): [PCDPC] - Port size (6) does not match connection size (4) for port 'CC_MUX_DataBUS_Out'. The port definition is at: C:/PRJ0_uDATAPATH_1/rtl/MUX_Datapath.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/MUX_Datapath_B File: C:/PRJ0_uDATAPATH_1/rtl/MUX_Datapath.v
+# ** Warning: (vsim-3015) C:/PRJ0_uDATAPATH_1/rtl/uDataPath.v(178): [PCDPC] - Port size (6) does not match connection size (4) for port 'CC_MUX_DataBUS_Out'. The port definition is at: C:/PRJ0_uDATAPATH_1/rtl/MUX_Datapath.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/MUX_Datapath_C File: C:/PRJ0_uDATAPATH_1/rtl/MUX_Datapath.v
+# ** Warning: (vsim-3015) C:/PRJ0_uDATAPATH_1/rtl/WB_uProcesador.v(102): [PCDPC] - Port size (8) does not match connection size (1) for port 'SistemaControl_Reg_IR_OP_In'. The port definition is at: C:/PRJ0_uDATAPATH_1/rtl/SistemaControl.v(21).
+#    Time: 0 ps  Iteration: 0  Instance: /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0 File: C:/PRJ0_uDATAPATH_1/rtl/SistemaControl.v
+# 
+# do C:/PRJ0_uDATAPATH_1/simulation/modelsim/BB_SYSTEM.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# delete wave *
+# add wave -noupdate /BB_SYSTEM_vlg_tst/eachvec
+# 
+# add wave  -divider uDATAPATH
+# add wave -noupdate /BB_SYSTEM_vlg_tst/BB_SYSTEM_CLOCK_50
+# add wave -noupdate /BB_SYSTEM_vlg_tst/BB_SYSTEM_RESET_InHigh
+# add wave -noupdate /BB_SYSTEM_vlg_tst/DataMemory_Cont
+# 
+# add wave  -divider REGISTERS
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/Scratchpath_DataPath/SC_RegGENERAL_g1/SC_RegGENERAL_DataBUS_Out
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/Scratchpath_DataPath/SC_RegGENERAL_g2/SC_RegGENERAL_DataBUS_Out
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/Scratchpath_DataPath/SC_RegGENERAL_g3/SC_RegGENERAL_DataBUS_Out
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/Scratchpath_DataPath/SC_RegGENERAL_g4/SC_RegGENERAL_DataBUS_Out
+# 
+# add wave  -divider DATAPATH
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/uDataPath_ALU_Flags_Write_PCR
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/Scratchpath_DataPath/Scratchpath_Reg_IR_RS1
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/Scratchpath_DataPath/Scratchpath_Reg_IR_RS2
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/Scratchpath_DataPath/Scratchpath_Reg_IR_RD
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/Scratchpath_DataPath/Scratchpath_Reg_IR_OP
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/Scratchpath_DataPath/Scratchpath_Reg_IR_IR13
+# 
+# add wave  -divider DATA_MEMORY
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/Data_Memory_u0/DataMemory_Address_In
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/Data_Memory_u0/DataMemory_Data_In
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/Data_Memory_u0/DataMemory_Data_Out
+# 
+# add wave  -divider SISTEMACONTROL
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/SistemaControl_MUX_A_MIR
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/SistemaControl_MUX_B_MIR
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/SistemaControl_MUX_C_MIR
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/Psr/SC_Psr_Out
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/branchControl/Brach_output
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/CSAI/CSAI_DATA_OUTPUT
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/MUX_MIM/CC_MUX_data_OutBUS
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/MIM_ControlStore/CC_MIM_ControlStore_data_OutBUS
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/MIR/SC_MIR_Cond_OutBUS
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/MIR/SC_MIR_JumpAddr_OutBUS
+# 
+# add wave  -divider ALU
+# add wave -noupdate /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/CC_Datapath_ALU/CC_ALU_dataA_InBUS
+# add wave -noupdate /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/CC_Datapath_ALU/CC_ALU_dataB_InBUS
+# add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/CC_Datapath_ALU/CC_ALU_data_OutBUS
+# add wave -noupdate /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/CC_Datapath_ALU/CC_ALU_selection_InBUS
+# 
+# 
+# restart
+# run 1ms
+# Running testbench
+# ** Note: $finish    : C:/PRJ0_uDATAPATH_1/simulation/modelsim/BB_SYSTEM.vt(68)
+#    Time: 200100 ps  Iteration: 0  Instance: /BB_SYSTEM_vlg_tst
+# 1
+# Break in Module BB_SYSTEM_vlg_tst at C:/PRJ0_uDATAPATH_1/simulation/modelsim/BB_SYSTEM.vt line 68
+# 
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {319999492 ps} 0}
+# quietly wave cursor active 1
+# configure wave -namecolwidth 445
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ns
+# update
+# WaveRestoreZoom {59829352 ps} {60892417 ps}
+# End time: 19:23:30 on Oct 17,2019, Elapsed time: 0:04:23
+# Errors: 0, Warnings: 5
