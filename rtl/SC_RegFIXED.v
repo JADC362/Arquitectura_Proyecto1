@@ -47,7 +47,7 @@ reg [DATAWIDTH_BUS-1:0] RegFIXED_Signal;
 always @ (*)
 	RegFIXED_Signal = RegFIXED_Register;
 // REGISTER : SEQUENTIAL
-always @ ( posedge SC_RegFIXED_CLOCK_50 , posedge SC_RegGENERAL_RESET_InHigh)
+always @ ( negedge SC_RegFIXED_CLOCK_50 , posedge SC_RegGENERAL_RESET_InHigh)
 	if (SC_RegGENERAL_RESET_InHigh==1)
 		RegFIXED_Register <= DATA_REGFIXED_INIT;
 	else

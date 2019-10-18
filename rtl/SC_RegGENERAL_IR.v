@@ -54,7 +54,7 @@ module SC_RegGENERAL_IR #(
 
 // REGISTER : SEQUENTIAL
 	//STATE REGISTER: SEQUENTIAL
-	always @(posedge SC_RegGENERAL_CLOCK_50, posedge SC_RegGENERAL_RESET_InHigh)
+	always @(negedge SC_RegGENERAL_CLOCK_50, posedge SC_RegGENERAL_RESET_InHigh)
 	begin
 		if (SC_RegGENERAL_RESET_InHigh == 1'b1)
 			RegGENERAL_Register <= 0;

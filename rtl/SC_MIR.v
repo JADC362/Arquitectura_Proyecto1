@@ -52,7 +52,7 @@ begin
 	MIR_Signal = SC_MIR_data_InBUS;
 end	
 //STATE REGISTER: SEQUENTIAL
-always @(negedge SC_MIR_CLOCK_50, posedge SC_MIR_RESET_InHigh)
+always @(posedge SC_MIR_CLOCK_50, posedge SC_MIR_RESET_InHigh)
 begin
 	if (SC_MIR_RESET_InHigh == 1'b1)
 		MIR_Register <= 0;

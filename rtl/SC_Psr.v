@@ -47,7 +47,7 @@ module SC_Psr #(
 		RegGENERAL_Signal = RegGENERAL_Register;
 
 // REGISTER : SEQUENTIAL
-	always @ ( posedge SC_Psr_CLOCK_50)
+	always @ ( negedge SC_Psr_CLOCK_50)
 		RegGENERAL_Register <= RegGENERAL_Signal;
 //=======================================================
 //  Outputs

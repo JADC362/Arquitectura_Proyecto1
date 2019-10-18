@@ -52,7 +52,7 @@ begin
 		32'h00000820:DataMemory_Data_Out=32'h02800002;
 		32'h00000824:DataMemory_Data_Out=32'h10bffffb;
 	
-		default: DataMemory_Data_Out=8'h00000000; 
+		default: DataMemory_Data_Out=32'h00000000; 
 	endcase
 end
 
