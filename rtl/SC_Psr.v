@@ -7,6 +7,7 @@ module SC_Psr #(
 )(
 	//////////// INPUTS //////////
 	SC_Psr_CLOCK_50,
+	SC_Psr_RESET_InHigh,
 	//banderas
 	SC_Psr_negativo,
 	SC_Psr_cero,
@@ -27,6 +28,7 @@ module SC_Psr #(
 	input       SC_Psr_cero;
 	input       SC_Psr_overflow;
 	input       SC_Psr_carry;
+	input			SC_Psr_RESET_InHigh;
 	
 //=======================================================
 //  REG/WIRE declarations
@@ -47,8 +49,13 @@ module SC_Psr #(
 		RegGENERAL_Signal = RegGENERAL_Register;
 
 // REGISTER : SEQUENTIAL
-	always @ ( negedge SC_Psr_CLOCK_50)
-		RegGENERAL_Register <= RegGENERAL_Signal;
+	always @ ( negedge SC_Psr_CLOCK_50, posedge SC_Psr_RESET_InHigh)
+	begin
+		if (SC_Psr_RESET_InHigh == 1'b1)
+			RegGENERAL_Register <= 0;
+		else
+			RegGENERAL_Register <= RegGENERAL_Signal;
+	end
 //=======================================================
 //  Outputs
 //=======================================================

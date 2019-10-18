@@ -7,7 +7,8 @@ module SC_CSAI #(parameter DATAWIDTH_BUS_CSAI=11)(
 	CSAI_DATA_OUTPUT,
 	//INPUTS
 	SC_CSAI_CLOCK_50,
-	CSAI_DATA_INPUT
+	CSAI_DATA_INPUT,
+	SC_CSAI_RESET_InHigh,
 );
 
 //=======================================================
@@ -16,6 +17,7 @@ module SC_CSAI #(parameter DATAWIDTH_BUS_CSAI=11)(
 	output reg	[DATAWIDTH_BUS_CSAI-1:0] CSAI_DATA_OUTPUT;
 	input			SC_CSAI_CLOCK_50;
 	input 		[DATAWIDTH_BUS_CSAI-1:0] CSAI_DATA_INPUT;
+	input 		SC_CSAI_RESET_InHigh;
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
@@ -30,8 +32,13 @@ module SC_CSAI #(parameter DATAWIDTH_BUS_CSAI=11)(
 	RegGENERAL_Signal = CSAI_DATA_INPUT + 1'b1;
 
 // REGISTER : SEQUENTIAL
-	always @ ( posedge SC_CSAI_CLOCK_50 )
-	RegGENERAL_Register <= RegGENERAL_Signal;
+	always @ ( posedge SC_CSAI_CLOCK_50, posedge SC_CSAI_RESET_InHigh )
+	begin
+		if (SC_CSAI_RESET_InHigh == 1'b1)
+			RegGENERAL_Register <= 0;
+		else
+			RegGENERAL_Register <= RegGENERAL_Signal;
+	end
 	
 //=======================================================
 //  Outputs

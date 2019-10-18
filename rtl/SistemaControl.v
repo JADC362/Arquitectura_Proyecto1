@@ -94,6 +94,7 @@ SC_CSAI CSAI(
 	//entradas
 	.SC_CSAI_CLOCK_50(SistemaControl_CLOCK_50),
 	.CSAI_DATA_INPUT(MUX_MIM_Out),
+	.SC_CSAI_RESET_InHigh(SistemaControl_RESET_InHigh),
 	//Salidas
 	.CSAI_DATA_OUTPUT(CSAI_Out)
 );
@@ -104,6 +105,7 @@ SC_Psr #(.DATAWIDTH_ALU_SELECTION(DATAWIDTH_ALU_SELECTION))Psr(
 	.SC_Psr_Out(Psr_Out),
 	//entradas
 	.SC_Psr_CLOCK_50(SistemaControl_CLOCK_50),
+	.SC_Psr_RESET_InHigh(SistemaControl_RESET_InHigh),
 	.SC_Psr_Write_InLow(SistemaControl_ALU_Flags_Write_PCR),
 	.SC_Psr_negativo(SistemaControl_Negative_InLow),
 	.SC_Psr_cero(SistemaControl_Zero_InLow),
