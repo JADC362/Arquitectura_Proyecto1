@@ -20,8 +20,7 @@ module WB_uProcesador #(
 )(
 //////////// INPUTS //////////
 	WB_uProcesador_CLOCK_50,
-	WB_uProcesador_Reset_InHigh,
-	DataMemory_Cont
+	WB_uProcesador_Reset_InHigh
 );
 
 //=======================================================
@@ -29,7 +28,6 @@ module WB_uProcesador #(
 //=======================================================
 	input 	WB_uProcesador_CLOCK_50;
 	input 	WB_uProcesador_Reset_InHigh;
-	input 	[DATAWIDTH_BUS-1:0] DataMemory_Cont;
 	
 //=======================================================
 //  REG/WIRE declarations
@@ -125,8 +123,7 @@ Data_Memory #(.DATAWIDTH_BUS(DATAWIDTH_BUS)) Data_Memory_u0(
 	.DataMemory_Selector_RD(uDataPath_DataMemory_Selector_In_Wire),
 	.DataMemory_Selector_WR(uDataPath_DataMemory_WR_Wire),
 	.DataMemory_Address_In(uDataPath_Scratchpath_MUX_Out_A_Wire),
-	.DataMemory_Data_In(uDataPath_Scratchpath_MUX_Out_B_Wire),
-	.DataMemory_Cont(DataMemory_Cont)
+	.DataMemory_Data_In(uDataPath_Scratchpath_MUX_Out_B_Wire)
 );
 
 endmodule

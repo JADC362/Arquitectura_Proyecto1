@@ -7,487 +7,487 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/PRJ0_uDATAPATH_1/simulation/modelsim
+Z0 dC:/Arquitectura_Proyecto1-master/simulation/modelsim
 vBB_SYSTEM
-Z1 !s110 1571357947
+Z1 !s110 1571428090
 !i10b 1
-!s100 4KbFfgdUPWHA:K`;bzVGo1
-IGC:N@QRIUPfU`a[?<VQ]H3
+!s100 bUYB82aZ?C^0LRd<2lec=2
+IbK]Yd_L?P8Q2H9M9V?d:K1
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1571357234
-8C:/PRJ0_uDATAPATH_1/bb_system.v
-FC:/PRJ0_uDATAPATH_1/bb_system.v
+w1571428047
+8C:/Arquitectura_Proyecto1-master/BB_SYSTEM.v
+FC:/Arquitectura_Proyecto1-master/BB_SYSTEM.v
 L0 6
 Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1571357947.000000
-!s107 C:/PRJ0_uDATAPATH_1/bb_system.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PRJ0_uDATAPATH_1|C:/PRJ0_uDATAPATH_1/bb_system.v|
+Z4 !s108 1571428090.000000
+!s107 C:/Arquitectura_Proyecto1-master/BB_SYSTEM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Arquitectura_Proyecto1-master|C:/Arquitectura_Proyecto1-master/BB_SYSTEM.v|
 !i113 1
 Z5 o-vlog01compat -work work
-!s92 -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1
+!s92 -vlog01compat -work work +incdir+C:/Arquitectura_Proyecto1-master
 Z6 tCvgOpt 0
 n@b@b_@s@y@s@t@e@m
 vBB_SYSTEM_vlg_tst
 R1
 !i10b 1
-!s100 VOj12fBO8ebC1jHKYc5Nc1
-IEmkzMYhj^iF[4m;ImVNWk3
+!s100 ?@BMM4AfN:aiAWS69?XYf1
+IBR<=HIb]EaXEMNZLceGEX1
 R2
 R0
-w1571357536
-8C:/PRJ0_uDATAPATH_1/simulation/modelsim/BB_SYSTEM.vt
-FC:/PRJ0_uDATAPATH_1/simulation/modelsim/BB_SYSTEM.vt
+w1571427689
+8C:/Arquitectura_Proyecto1-master/simulation/modelsim/BB_SYSTEM.vt
+FC:/Arquitectura_Proyecto1-master/simulation/modelsim/BB_SYSTEM.vt
 L0 28
 R3
 r1
 !s85 0
 31
 R4
-!s107 C:/PRJ0_uDATAPATH_1/simulation/modelsim/BB_SYSTEM.vt|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PRJ0_uDATAPATH_1/simulation/modelsim|C:/PRJ0_uDATAPATH_1/simulation/modelsim/BB_SYSTEM.vt|
+!s107 C:/Arquitectura_Proyecto1-master/simulation/modelsim/BB_SYSTEM.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Arquitectura_Proyecto1-master/simulation/modelsim|C:/Arquitectura_Proyecto1-master/simulation/modelsim/BB_SYSTEM.vt|
 !i113 1
 R5
-!s92 -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/simulation/modelsim
+!s92 -vlog01compat -work work +incdir+C:/Arquitectura_Proyecto1-master/simulation/modelsim
 R6
 n@b@b_@s@y@s@t@e@m_vlg_tst
 vCC_ALU
 R1
 !i10b 1
-!s100 ]zHn@O3[k>ge;X77?zl:>2
-I3E0oQ5m1ljz[4:XhHi=i10
+!s100 liW]RcUlZ1GQjnRZ7fQT81
+IXZnK4?^keeN=T4WZ?2N6L3
 R2
 R0
-Z7 w1571169987
-8C:/PRJ0_uDATAPATH_1/rtl/CC_ALU.v
-FC:/PRJ0_uDATAPATH_1/rtl/CC_ALU.v
-Z8 L0 21
+w1571415049
+8C:/Arquitectura_Proyecto1-master/rtl/CC_ALU.v
+FC:/Arquitectura_Proyecto1-master/rtl/CC_ALU.v
+Z7 L0 21
 R3
 r1
 !s85 0
 31
-Z9 !s108 1571357946.000000
-!s107 C:/PRJ0_uDATAPATH_1/rtl/CC_ALU.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PRJ0_uDATAPATH_1/rtl|C:/PRJ0_uDATAPATH_1/rtl/CC_ALU.v|
+R4
+!s107 C:/Arquitectura_Proyecto1-master/rtl/CC_ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Arquitectura_Proyecto1-master/rtl|C:/Arquitectura_Proyecto1-master/rtl/CC_ALU.v|
 !i113 1
 R5
-Z10 !s92 -vlog01compat -work work +incdir+C:/PRJ0_uDATAPATH_1/rtl
+Z8 !s92 -vlog01compat -work work +incdir+C:/Arquitectura_Proyecto1-master/rtl
 R6
 n@c@c_@a@l@u
 vCC_branchControl
-Z11 !s110 1571357946
+R1
 !i10b 1
 !s100 L9;67D1n;HE<<A^3>2]@H3
-IJ[08OWkNhBQ1nMOYmZN_D3
+II]:8OdTQKVm:0P0Af`;im2
 R2
 R0
-R7
-8C:/PRJ0_uDATAPATH_1/rtl/CC_branchControl.v
-FC:/PRJ0_uDATAPATH_1/rtl/CC_branchControl.v
+Z9 w1571408237
+8C:/Arquitectura_Proyecto1-master/rtl/CC_branchControl.v
+FC:/Arquitectura_Proyecto1-master/rtl/CC_branchControl.v
 L0 7
 R3
 r1
 !s85 0
 31
-R9
-!s107 C:/PRJ0_uDATAPATH_1/rtl/CC_branchControl.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PRJ0_uDATAPATH_1/rtl|C:/PRJ0_uDATAPATH_1/rtl/CC_branchControl.v|
+R4
+!s107 C:/Arquitectura_Proyecto1-master/rtl/CC_branchControl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Arquitectura_Proyecto1-master/rtl|C:/Arquitectura_Proyecto1-master/rtl/CC_branchControl.v|
 !i113 1
 R5
-R10
+R8
 R6
 n@c@c_branch@control
 vCC_DECODER
-R11
+R1
 !i10b 1
 !s100 P:G9O1^BdYPOAbm]6fESL3
-I8Aamh1=62=G[=X1TcX@7i1
+IX[B<BbeeEEK3`9KeO9d7>0
 R2
 R0
+R9
+8C:/Arquitectura_Proyecto1-master/rtl/CC_DECODER.v
+FC:/Arquitectura_Proyecto1-master/rtl/CC_DECODER.v
 R7
-8C:/PRJ0_uDATAPATH_1/rtl/CC_DECODER.v
-FC:/PRJ0_uDATAPATH_1/rtl/CC_DECODER.v
-R8
 R3
 r1
 !s85 0
 31
-R9
-!s107 C:/PRJ0_uDATAPATH_1/rtl/CC_DECODER.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PRJ0_uDATAPATH_1/rtl|C:/PRJ0_uDATAPATH_1/rtl/CC_DECODER.v|
+R4
+!s107 C:/Arquitectura_Proyecto1-master/rtl/CC_DECODER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Arquitectura_Proyecto1-master/rtl|C:/Arquitectura_Proyecto1-master/rtl/CC_DECODER.v|
 !i113 1
 R5
-R10
+R8
 R6
 n@c@c_@d@e@c@o@d@e@r
 vCC_MIM_ControlStore
-R11
+R1
 !i10b 1
-!s100 c2]OKUeP>U27HzfP2>B5l2
-IcCjeed0id?Ie4JPJ:>9`50
+!s100 >RU;RB3kX^Q=@2P87KgkP0
+I7EniRi^dW3Fof8nN<Y87^0
 R2
 R0
-R7
-8C:/PRJ0_uDATAPATH_1/rtl/CC_MIM_ControlStore.v
-FC:/PRJ0_uDATAPATH_1/rtl/CC_MIM_ControlStore.v
+w1571427164
+8C:/Arquitectura_Proyecto1-master/rtl/CC_MIM_ControlStore.v
+FC:/Arquitectura_Proyecto1-master/rtl/CC_MIM_ControlStore.v
 L0 1
 R3
 r1
 !s85 0
 31
-R9
-!s107 C:/PRJ0_uDATAPATH_1/rtl/CC_MIM_ControlStore.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PRJ0_uDATAPATH_1/rtl|C:/PRJ0_uDATAPATH_1/rtl/CC_MIM_ControlStore.v|
+R4
+!s107 C:/Arquitectura_Proyecto1-master/rtl/CC_MIM_ControlStore.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Arquitectura_Proyecto1-master/rtl|C:/Arquitectura_Proyecto1-master/rtl/CC_MIM_ControlStore.v|
 !i113 1
 R5
-R10
+R8
 R6
 n@c@c_@m@i@m_@control@store
 vCC_MUX_MIM
-R11
+R1
 !i10b 1
 !s100 cSLF@O=O82<feWmida]Va3
-IUV=4]P4]4nCagmN^jXjb:2
+I4n08HYabPn6[1YKHaHJGK1
 R2
 R0
-R7
-8C:/PRJ0_uDATAPATH_1/rtl/CC_MUX_MIM.v
-FC:/PRJ0_uDATAPATH_1/rtl/CC_MUX_MIM.v
+R9
+8C:/Arquitectura_Proyecto1-master/rtl/CC_MUX_MIM.v
+FC:/Arquitectura_Proyecto1-master/rtl/CC_MUX_MIM.v
 L0 1
 R3
 r1
 !s85 0
 31
-R9
-!s107 C:/PRJ0_uDATAPATH_1/rtl/CC_MUX_MIM.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PRJ0_uDATAPATH_1/rtl|C:/PRJ0_uDATAPATH_1/rtl/CC_MUX_MIM.v|
+R4
+!s107 C:/Arquitectura_Proyecto1-master/rtl/CC_MUX_MIM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Arquitectura_Proyecto1-master/rtl|C:/Arquitectura_Proyecto1-master/rtl/CC_MUX_MIM.v|
 !i113 1
 R5
-R10
+R8
 R6
 n@c@c_@m@u@x_@m@i@m
 vCC_MUXX
-R11
+Z10 !s110 1571428089
 !i10b 1
 !s100 ?l83lD8ZU:P:BaQ[<ga=B1
-I<P6oObI9P5gjl<FKD[hzI3
+IYod7GUfeoCHKec^ohz<gV3
 R2
 R0
+R9
+8C:/Arquitectura_Proyecto1-master/rtl/CC_MUXX.v
+FC:/Arquitectura_Proyecto1-master/rtl/CC_MUXX.v
 R7
-8C:/PRJ0_uDATAPATH_1/rtl/CC_MUXX.v
-FC:/PRJ0_uDATAPATH_1/rtl/CC_MUXX.v
-R8
 R3
 r1
 !s85 0
 31
-R9
-!s107 C:/PRJ0_uDATAPATH_1/rtl/CC_MUXX.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PRJ0_uDATAPATH_1/rtl|C:/PRJ0_uDATAPATH_1/rtl/CC_MUXX.v|
+Z11 !s108 1571428089.000000
+!s107 C:/Arquitectura_Proyecto1-master/rtl/CC_MUXX.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Arquitectura_Proyecto1-master/rtl|C:/Arquitectura_Proyecto1-master/rtl/CC_MUXX.v|
 !i113 1
 R5
-R10
+R8
 R6
 n@c@c_@m@u@x@x
 vData_Memory
-R11
+R10
 !i10b 1
-!s100 5hDBjk1c2PP=IR59bbVCS2
-ICb]SL;?lROl0SOg7MQmIg1
+!s100 GI232HfFWzU4m5=^Rf:6P1
+IRgIf1Ze35:2gIzl4XbQ3H2
 R2
 R0
-w1571354056
-8C:/PRJ0_uDATAPATH_1/rtl/Data_Memory.v
-FC:/PRJ0_uDATAPATH_1/rtl/Data_Memory.v
+w1571427711
+8C:/Arquitectura_Proyecto1-master/rtl/Data_Memory.v
+FC:/Arquitectura_Proyecto1-master/rtl/Data_Memory.v
 L0 7
 R3
 r1
 !s85 0
 31
-R9
-!s107 C:/PRJ0_uDATAPATH_1/rtl/Data_Memory.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PRJ0_uDATAPATH_1/rtl|C:/PRJ0_uDATAPATH_1/rtl/Data_Memory.v|
+R11
+!s107 C:/Arquitectura_Proyecto1-master/rtl/Data_Memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Arquitectura_Proyecto1-master/rtl|C:/Arquitectura_Proyecto1-master/rtl/Data_Memory.v|
 !i113 1
 R5
-R10
+R8
 R6
 n@data_@memory
 vMUX_C
-R11
+R10
 !i10b 1
 !s100 kB:ncPadX;[G0R62Ifafc0
-I;FaoP64FjUQiU>9ikjZX52
+I4faEJKKSEa`TC4o83^LOi0
 R2
 R0
-R7
-8C:/PRJ0_uDATAPATH_1/rtl/MUX_C.v
-FC:/PRJ0_uDATAPATH_1/rtl/MUX_C.v
+R9
+8C:/Arquitectura_Proyecto1-master/rtl/MUX_C.v
+FC:/Arquitectura_Proyecto1-master/rtl/MUX_C.v
 L0 1
 R3
 r1
 !s85 0
 31
-R9
-!s107 C:/PRJ0_uDATAPATH_1/rtl/MUX_C.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PRJ0_uDATAPATH_1/rtl|C:/PRJ0_uDATAPATH_1/rtl/MUX_C.v|
+R11
+!s107 C:/Arquitectura_Proyecto1-master/rtl/MUX_C.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Arquitectura_Proyecto1-master/rtl|C:/Arquitectura_Proyecto1-master/rtl/MUX_C.v|
 !i113 1
 R5
-R10
+R8
 R6
 n@m@u@x_@c
 vMUX_Datapath
-R11
+R10
 !i10b 1
 !s100 cCnCjTHbiFS2XOPkP4N<h2
-I]`gS1C748^CQbRDQTZi4Y1
+IV;fLbNIT?6lE6T13IV[H73
 R2
 R0
-R7
-8C:/PRJ0_uDATAPATH_1/rtl/MUX_Datapath.v
-FC:/PRJ0_uDATAPATH_1/rtl/MUX_Datapath.v
+R9
+8C:/Arquitectura_Proyecto1-master/rtl/MUX_Datapath.v
+FC:/Arquitectura_Proyecto1-master/rtl/MUX_Datapath.v
 L0 1
 R3
 r1
 !s85 0
 31
-R9
-!s107 C:/PRJ0_uDATAPATH_1/rtl/MUX_Datapath.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PRJ0_uDATAPATH_1/rtl|C:/PRJ0_uDATAPATH_1/rtl/MUX_Datapath.v|
+R11
+!s107 C:/Arquitectura_Proyecto1-master/rtl/MUX_Datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Arquitectura_Proyecto1-master/rtl|C:/Arquitectura_Proyecto1-master/rtl/MUX_Datapath.v|
 !i113 1
 R5
-R10
+R8
 R6
 n@m@u@x_@datapath
 vSC_CSAI
-R11
+R10
 !i10b 1
-!s100 YMX]O5S1QBT@YiNnJOknD1
-IPAzHg0G5K<M0FC9TD:1Wd1
+!s100 klEc5[X3Mm=hh`F<_WY5`1
+IAkbSg<I21VQ;YO^eDg@`Q2
 R2
 R0
-R7
-8C:/PRJ0_uDATAPATH_1/rtl/SC_CSAI.v
-FC:/PRJ0_uDATAPATH_1/rtl/SC_CSAI.v
+R9
+8C:/Arquitectura_Proyecto1-master/rtl/SC_CSAI.v
+FC:/Arquitectura_Proyecto1-master/rtl/SC_CSAI.v
 L0 5
 R3
 r1
 !s85 0
 31
-R9
-!s107 C:/PRJ0_uDATAPATH_1/rtl/SC_CSAI.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PRJ0_uDATAPATH_1/rtl|C:/PRJ0_uDATAPATH_1/rtl/SC_CSAI.v|
+R11
+!s107 C:/Arquitectura_Proyecto1-master/rtl/SC_CSAI.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Arquitectura_Proyecto1-master/rtl|C:/Arquitectura_Proyecto1-master/rtl/SC_CSAI.v|
 !i113 1
 R5
-R10
+R8
 R6
 n@s@c_@c@s@a@i
 vSC_MIR
-Z12 !s110 1571357945
+R10
 !i10b 1
-!s100 CA1YYe@b6CkIgbcnF:`a92
-I1hM06j=kUQ`[Pj:b`f5g:0
+!s100 eZ]J`PBa7Q:LO59^Z9>lJ2
+Ib=TEj?kfjSPiF@nP667Mm2
 R2
 R0
-w1571357614
-8C:/PRJ0_uDATAPATH_1/rtl/SC_MIR.v
-FC:/PRJ0_uDATAPATH_1/rtl/SC_MIR.v
+R9
+8C:/Arquitectura_Proyecto1-master/rtl/SC_MIR.v
+FC:/Arquitectura_Proyecto1-master/rtl/SC_MIR.v
 L0 1
 R3
 r1
 !s85 0
 31
-Z13 !s108 1571357945.000000
-!s107 C:/PRJ0_uDATAPATH_1/rtl/SC_MIR.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PRJ0_uDATAPATH_1/rtl|C:/PRJ0_uDATAPATH_1/rtl/SC_MIR.v|
+R11
+!s107 C:/Arquitectura_Proyecto1-master/rtl/SC_MIR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Arquitectura_Proyecto1-master/rtl|C:/Arquitectura_Proyecto1-master/rtl/SC_MIR.v|
 !i113 1
 R5
-R10
+R8
 R6
 n@s@c_@m@i@r
 vSC_Psr
-R12
+R10
 !i10b 1
-!s100 Hh1^i5c]9BF7L1JmT?bKZ1
-IfTe^UEN=e0Jc@QF2HM^i40
+!s100 Nn0Xj1RJ2ajNEE58TfUOz0
+ImFOZo1]8bU`[I=JY5RkDm3
 R2
 R0
-R7
-8C:/PRJ0_uDATAPATH_1/rtl/SC_Psr.v
-FC:/PRJ0_uDATAPATH_1/rtl/SC_Psr.v
+R9
+8C:/Arquitectura_Proyecto1-master/rtl/SC_Psr.v
+FC:/Arquitectura_Proyecto1-master/rtl/SC_Psr.v
 L0 5
 R3
 r1
 !s85 0
 31
-R13
-!s107 C:/PRJ0_uDATAPATH_1/rtl/SC_Psr.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PRJ0_uDATAPATH_1/rtl|C:/PRJ0_uDATAPATH_1/rtl/SC_Psr.v|
+R11
+!s107 C:/Arquitectura_Proyecto1-master/rtl/SC_Psr.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Arquitectura_Proyecto1-master/rtl|C:/Arquitectura_Proyecto1-master/rtl/SC_Psr.v|
 !i113 1
 R5
-R10
+R8
 R6
 n@s@c_@psr
 vSC_RegFIXED
-R12
+R10
 !i10b 1
-!s100 PUiDATk[[SHlnk0:NTYJJ3
-IlG=9Id?oFi;eA77`9lS`:2
+!s100 V=>T:9k4TUjzU_Se]<>=L2
+IA;3i`M>S[zSC1Z4E0bPJQ1
 R2
 R0
+R9
+8C:/Arquitectura_Proyecto1-master/rtl/SC_RegFIXED.v
+FC:/Arquitectura_Proyecto1-master/rtl/SC_RegFIXED.v
 R7
-8C:/PRJ0_uDATAPATH_1/rtl/SC_RegFIXED.v
-FC:/PRJ0_uDATAPATH_1/rtl/SC_RegFIXED.v
-R8
 R3
 r1
 !s85 0
 31
-R13
-!s107 C:/PRJ0_uDATAPATH_1/rtl/SC_RegFIXED.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PRJ0_uDATAPATH_1/rtl|C:/PRJ0_uDATAPATH_1/rtl/SC_RegFIXED.v|
+R11
+!s107 C:/Arquitectura_Proyecto1-master/rtl/SC_RegFIXED.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Arquitectura_Proyecto1-master/rtl|C:/Arquitectura_Proyecto1-master/rtl/SC_RegFIXED.v|
 !i113 1
 R5
-R10
+R8
 R6
 n@s@c_@reg@f@i@x@e@d
 vSC_RegGENERAL
-R12
+R10
 !i10b 1
-!s100 3i=gF9RHj[FWJ94HJRTR23
-IPZJ5Z:=G5Y015QQb1bK]_3
+!s100 ZEmm5X<2Yle@?ZAKZIfjU0
+I>5JXaXm@I450gCSV_lA@P3
 R2
 R0
+R9
+8C:/Arquitectura_Proyecto1-master/rtl/SC_RegGENERAL.v
+FC:/Arquitectura_Proyecto1-master/rtl/SC_RegGENERAL.v
 R7
-8C:/PRJ0_uDATAPATH_1/rtl/SC_RegGENERAL.v
-FC:/PRJ0_uDATAPATH_1/rtl/SC_RegGENERAL.v
-R8
 R3
 r1
 !s85 0
 31
-R13
-!s107 C:/PRJ0_uDATAPATH_1/rtl/SC_RegGENERAL.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PRJ0_uDATAPATH_1/rtl|C:/PRJ0_uDATAPATH_1/rtl/SC_RegGENERAL.v|
+R11
+!s107 C:/Arquitectura_Proyecto1-master/rtl/SC_RegGENERAL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Arquitectura_Proyecto1-master/rtl|C:/Arquitectura_Proyecto1-master/rtl/SC_RegGENERAL.v|
 !i113 1
 R5
-R10
+R8
 R6
 n@s@c_@reg@g@e@n@e@r@a@l
 vSC_RegGENERAL_IR
-R12
+Z12 !s110 1571428088
 !i10b 1
-!s100 P8a<aT:c_@8:aY<aebK1`3
-In7hTAjIz>[:]5FgdG6PBo2
+!s100 oLz2mIM<Em2oOffBY9dod0
+I=FFA6_6?d_^9Qc5:ac_mV3
 R2
 R0
-R7
-8C:/PRJ0_uDATAPATH_1/rtl/SC_RegGENERAL_IR.v
-FC:/PRJ0_uDATAPATH_1/rtl/SC_RegGENERAL_IR.v
+R9
+8C:/Arquitectura_Proyecto1-master/rtl/SC_RegGENERAL_IR.v
+FC:/Arquitectura_Proyecto1-master/rtl/SC_RegGENERAL_IR.v
 L0 4
 R3
 r1
 !s85 0
 31
-R13
-!s107 C:/PRJ0_uDATAPATH_1/rtl/SC_RegGENERAL_IR.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PRJ0_uDATAPATH_1/rtl|C:/PRJ0_uDATAPATH_1/rtl/SC_RegGENERAL_IR.v|
+Z13 !s108 1571428088.000000
+!s107 C:/Arquitectura_Proyecto1-master/rtl/SC_RegGENERAL_IR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Arquitectura_Proyecto1-master/rtl|C:/Arquitectura_Proyecto1-master/rtl/SC_RegGENERAL_IR.v|
 !i113 1
 R5
-R10
+R8
 R6
 n@s@c_@reg@g@e@n@e@r@a@l_@i@r
 vScratchpath
 R12
 !i10b 1
 !s100 I2m_[;cabB4Hc>]0i_cP01
-IGlcOH=lRUQ]>Z`F>o]3O03
+I:=?PHQ_1=g7I5?eQ=FX9?2
 R2
 R0
-R7
-8C:/PRJ0_uDATAPATH_1/rtl/Scratchpath.v
-FC:/PRJ0_uDATAPATH_1/rtl/Scratchpath.v
+R9
+8C:/Arquitectura_Proyecto1-master/rtl/Scratchpath.v
+FC:/Arquitectura_Proyecto1-master/rtl/Scratchpath.v
 L0 5
 R3
 r1
 !s85 0
 31
 R13
-!s107 C:/PRJ0_uDATAPATH_1/rtl/Scratchpath.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PRJ0_uDATAPATH_1/rtl|C:/PRJ0_uDATAPATH_1/rtl/Scratchpath.v|
+!s107 C:/Arquitectura_Proyecto1-master/rtl/Scratchpath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Arquitectura_Proyecto1-master/rtl|C:/Arquitectura_Proyecto1-master/rtl/Scratchpath.v|
 !i113 1
 R5
-R10
+R8
 R6
 n@scratchpath
 vSistemaControl
 R12
 !i10b 1
-!s100 1jPO_EK>762=7@?__2ZPk1
-IzS7GGkMnY=zcD;^990[>U2
+!s100 VLjXMZ2?Gla@B;?5M]MM91
+Ic44aI`BX7d^M6X9C@5<hX1
 R2
 R0
-w1571350095
-8C:/PRJ0_uDATAPATH_1/rtl/SistemaControl.v
-FC:/PRJ0_uDATAPATH_1/rtl/SistemaControl.v
+R9
+8C:/Arquitectura_Proyecto1-master/rtl/SistemaControl.v
+FC:/Arquitectura_Proyecto1-master/rtl/SistemaControl.v
 L0 2
 R3
 r1
 !s85 0
 31
 R13
-!s107 C:/PRJ0_uDATAPATH_1/rtl/SistemaControl.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PRJ0_uDATAPATH_1/rtl|C:/PRJ0_uDATAPATH_1/rtl/SistemaControl.v|
+!s107 C:/Arquitectura_Proyecto1-master/rtl/SistemaControl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Arquitectura_Proyecto1-master/rtl|C:/Arquitectura_Proyecto1-master/rtl/SistemaControl.v|
 !i113 1
 R5
-R10
+R8
 R6
 n@sistema@control
 vuDATAPATH
 R12
 !i10b 1
 !s100 beL4B1lkJkSU76M]mG8LJ3
-IOS>J5_NM;W9ee[;Hozg051
+IRH>oFI>?`l:7lYS[`=BS]2
 R2
 R0
-R7
-8C:/PRJ0_uDATAPATH_1/rtl/uDataPath.v
-FC:/PRJ0_uDATAPATH_1/rtl/uDataPath.v
+R9
+8C:/Arquitectura_Proyecto1-master/rtl/uDataPath.v
+FC:/Arquitectura_Proyecto1-master/rtl/uDataPath.v
 L0 4
 R3
 r1
 !s85 0
 31
 R13
-!s107 C:/PRJ0_uDATAPATH_1/rtl/uDataPath.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PRJ0_uDATAPATH_1/rtl|C:/PRJ0_uDATAPATH_1/rtl/uDataPath.v|
+!s107 C:/Arquitectura_Proyecto1-master/rtl/uDataPath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Arquitectura_Proyecto1-master/rtl|C:/Arquitectura_Proyecto1-master/rtl/uDataPath.v|
 !i113 1
 R5
-R10
+R8
 R6
 nu@d@a@t@a@p@a@t@h
 vWB_uProcesador
 R12
 !i10b 1
-!s100 f6]bgeOY8Y1b7`A:z<ZQ31
-I0fUbe3mKeP=7cnJ_o54Te2
+!s100 dG5K>PEiJQgJCdB0jSd0<2
+Ih4oNN8Vn]LC8HciPJn8;j1
 R2
 R0
-w1571357244
-8C:/PRJ0_uDATAPATH_1/rtl/WB_uProcesador.v
-FC:/PRJ0_uDATAPATH_1/rtl/WB_uProcesador.v
+w1571427678
+8C:/Arquitectura_Proyecto1-master/rtl/WB_uProcesador.v
+FC:/Arquitectura_Proyecto1-master/rtl/WB_uProcesador.v
 L0 6
 R3
 r1
 !s85 0
 31
 R13
-!s107 C:/PRJ0_uDATAPATH_1/rtl/WB_uProcesador.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PRJ0_uDATAPATH_1/rtl|C:/PRJ0_uDATAPATH_1/rtl/WB_uProcesador.v|
+!s107 C:/Arquitectura_Proyecto1-master/rtl/WB_uProcesador.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Arquitectura_Proyecto1-master/rtl|C:/Arquitectura_Proyecto1-master/rtl/WB_uProcesador.v|
 !i113 1
 R5
-R10
+R8
 R6
 n@w@b_u@procesador

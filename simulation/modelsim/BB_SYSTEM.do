@@ -6,7 +6,6 @@ add wave -noupdate /BB_SYSTEM_vlg_tst/eachvec
 add wave  -divider uDATAPATH
 add wave -noupdate /BB_SYSTEM_vlg_tst/BB_SYSTEM_CLOCK_50
 add wave -noupdate /BB_SYSTEM_vlg_tst/BB_SYSTEM_RESET_InHigh
-add wave -noupdate /BB_SYSTEM_vlg_tst/DataMemory_Cont
 
 add wave  -divider REGISTERS
 add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/Scratchpath_DataPath/SC_RegGENERAL_g1/SC_RegGENERAL_DataBUS_Out
@@ -21,6 +20,15 @@ add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesad
 add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/Scratchpath_DataPath/Scratchpath_Reg_IR_RD
 add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/Scratchpath_DataPath/Scratchpath_Reg_IR_OP
 add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/Scratchpath_DataPath/Scratchpath_Reg_IR_IR13
+add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/Scratchpath_DataPath/SC_RegGENERAL_Temp0/SC_RegGENERAL_DataBUS_Out
+add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/Scratchpath_DataPath/SC_RegGENERAL_Temp1/SC_RegGENERAL_DataBUS_Out
+add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/Scratchpath_DataPath/SC_RegGENERAL_Temp2/SC_RegGENERAL_DataBUS_Out
+add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/Scratchpath_DataPath/SC_RegGENERAL_Temp3/SC_RegGENERAL_DataBUS_Out
+add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/Scratchpath_DataPath/SC_RegGeneral_PC/SC_RegGENERAL_DataBUS_Out
+add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/uDataPath_MUX_C/CC_MUX_DataBUS_Out
+add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/MUX_Datapath_A/CC_MUX_DataBUS_Out
+add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/MUX_Datapath_B/CC_MUX_DataBUS_Out
+add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/uDataPath_u0/MUX_Datapath_C/CC_MUX_DataBUS_Out
 
 add wave  -divider DATA_MEMORY
 add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/Data_Memory_u0/DataMemory_Address_In
@@ -28,14 +36,17 @@ add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesad
 add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/Data_Memory_u0/DataMemory_Data_Out
 
 add wave  -divider SISTEMACONTROL
-add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/SistemaControl_MUX_A_MIR
-add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/SistemaControl_MUX_B_MIR
-add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/SistemaControl_MUX_C_MIR
 add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/Psr/SC_Psr_Out
 add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/branchControl/Brach_output
 add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/CSAI/CSAI_DATA_OUTPUT
 add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/MUX_MIM/CC_MUX_data_OutBUS
 add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/MIM_ControlStore/CC_MIM_ControlStore_data_OutBUS
+add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/MIR/SC_MIR_A_OutBUS
+add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/MIR/SC_MIR_B_OutBUS
+add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/MIR/SC_MIR_C_OutBUS
+add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/MIR/SC_MIR_Read_Out
+add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/MIR/SC_MIR_Write_Out
+add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/MIR/SC_MIR_ALU_OutBUS
 add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/MIR/SC_MIR_Cond_OutBUS
 add wave  -noupdate -radix Unsigned /BB_SYSTEM_vlg_tst/BB_SYSTEM_u0/WB_uProcesador_u0/SistemaControl_u0/MIR/SC_MIR_JumpAddr_OutBUS
 

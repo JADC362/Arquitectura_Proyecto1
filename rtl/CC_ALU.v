@@ -101,11 +101,11 @@ begin
 			 CC_ALU_Set_Flags_Out = 1'b1;
 			 end
 		4'b1001:  begin
-			 CC_ALU_data_OutBUS = {CC_ALU_dataA_InBUS[DATAWIDTH_BUS-3:0], 2'b00};	//LSHIFT2
+			 CC_ALU_data_OutBUS = {CC_ALU_dataA_InBUS[29:0], 2'b00};	//LSHIFT2
 			 CC_ALU_Set_Flags_Out = 1'b1;
 			 end
 		4'b1010:  begin
-			 CC_ALU_data_OutBUS = {CC_ALU_dataA_InBUS[DATAWIDTH_BUS-11:0], 10'b0000000000};	//LSHIFT10
+			 CC_ALU_data_OutBUS = {CC_ALU_dataA_InBUS[21:0], 10'b0000000000};	//LSHIFT10
 			 CC_ALU_Set_Flags_Out = 1'b1;
 			 end
 		4'b1011:  begin
@@ -132,7 +132,7 @@ begin
 			 CC_ALU_Set_Flags_Out = 1'b1;
 			 end
 		4'b1111:  begin
-			 CC_ALU_data_OutBUS = {CC_ALU_dataA_InBUS[4:0], CC_ALU_dataA_InBUS[DATAWIDTH_BUS-1:5]};	//RSHIFT5
+			 CC_ALU_data_OutBUS = {CC_ALU_dataA_InBUS[DATAWIDTH_BUS-1],CC_ALU_dataA_InBUS[DATAWIDTH_BUS-1],CC_ALU_dataA_InBUS[DATAWIDTH_BUS-1],CC_ALU_dataA_InBUS[DATAWIDTH_BUS-1],CC_ALU_dataA_InBUS[DATAWIDTH_BUS-1], CC_ALU_dataA_InBUS[DATAWIDTH_BUS-1:5]};	//RSHIFT5
 			 CC_ALU_Set_Flags_Out = 1'b1;
 			 end	
 		default : begin 

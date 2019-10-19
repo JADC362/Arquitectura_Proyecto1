@@ -7,8 +7,7 @@ module BB_SYSTEM(
 
 //////////// INPUTS //////////
 	BB_SYSTEM_CLOCK_50,
-	BB_SYSTEM_RESET_InHigh,
-	DataMemory_Cont	
+	BB_SYSTEM_RESET_InHigh
 );
 //=======================================================
 //  PARAMETER declarations
@@ -34,7 +33,6 @@ module BB_SYSTEM(
 
 	input 	BB_SYSTEM_CLOCK_50;
 	input 	BB_SYSTEM_RESET_InHigh;
-	input 	[DATAWIDTH_BUS-1:0] DataMemory_Cont;
 
 //=======================================================
 //  Structural coding
@@ -52,7 +50,6 @@ WB_uProcesador #(
 	.DATAWIDTH_BUS_REG_MIR_FIELD(DATAWIDTH_BUS_REG_MIR_FIELD)
 ) WB_uProcesador_u0 (
 	.WB_uProcesador_CLOCK_50(BB_SYSTEM_CLOCK_50),	
-	.WB_uProcesador_Reset_InHigh(BB_SYSTEM_RESET_InHigh),
-	.DataMemory_Cont(DataMemory_Cont)
+	.WB_uProcesador_Reset_InHigh(BB_SYSTEM_RESET_InHigh)
 );
 endmodule
