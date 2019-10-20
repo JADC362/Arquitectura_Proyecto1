@@ -22,7 +22,7 @@ SIMULACION
 
 CREADORES
 
-      - John Alejandro Duarte Carrasco
-      - Diego Felipe Martinez Valencia
-      - Alejandra
-      - Sergio Cardernas
+    - John Alejandro Duarte Carrasco
+    - Diego Felipe Martinez Valencia
+    - Alejandra Castellanos
+    - Sergio Cardernas
