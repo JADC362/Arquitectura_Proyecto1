@@ -1,4 +1,4 @@
-# Arquitectura_Proyecto1
+# Arquitectura de Sistemas Electrónicos - Proyecto 1 - Procesador ARC
 
 CONTEXTO
 
@@ -26,3 +26,6 @@ CREADORES
     - Diego Felipe Martinez Valencia
     - Alejandra Castellanos
     - Sergio Cardernas
+
+Departamento de Ingeniería Electríca y Electrónica.
+Universidad de los Andes.
