@@ -32,7 +32,12 @@ begin
 	case (CC_MUX_selection_InBUS)	
 		2'b00: CC_MUX_data_OutBUS = CC_MUX_Next_InBUS;
 		2'b01: CC_MUX_data_OutBUS = CC_MUX_Jump_InBUS;
-		2'b10: CC_MUX_data_OutBUS = {1'b1,CC_MUX_Decode_InBUS,2'b00};
+		2'b10: begin
+			if(CC_MUX_Decode_InBUS[7:6]==2'b00)
+				CC_MUX_data_OutBUS = {1'b1,CC_MUX_Decode_InBUS[7:3],5'b00000};
+			else
+				CC_MUX_data_OutBUS = {1'b1,CC_MUX_Decode_InBUS,2'b00};
+			end
 		default :   CC_MUX_data_OutBUS = CC_MUX_Next_InBUS; // channel 0 is selected 
 	endcase
 end
